@@ -31,7 +31,6 @@ public class Main extends Application {
 
 		
 		
-
 		TextArea schedule = new TextArea();
 		
 		
