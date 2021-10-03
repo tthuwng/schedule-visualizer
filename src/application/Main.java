@@ -73,7 +73,7 @@ public class Main extends Application {
 				newWindow.setScene(scene1);
 				newWindow.show();
 			}
-			
+		
 		});
 		
 		primaryStage.show();
