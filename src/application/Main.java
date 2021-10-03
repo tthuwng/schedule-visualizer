@@ -54,7 +54,8 @@ public class Main extends Application {
 
 				StackPane secondaryLayout = new StackPane();
 				int count = 0;
-				String[] s = schedule.getText().split("\\s");
+				//Added \" for the case of the word The appear right after a quote mark
+				String[] s = schedule.getText().split("\"|\\s");
 				for(int i = 0; i < s.length; i++)
 				{
 					if(s[i].equalsIgnoreCase("the"))
@@ -75,7 +76,7 @@ public class Main extends Application {
 			}
 		
 		});
-		
+		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		primaryStage.show();
 	}
 	
