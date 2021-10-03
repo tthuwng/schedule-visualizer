@@ -25,10 +25,10 @@ public class Main extends Application {
 		grid.setHgap(50);
 		grid.setVgap(10);
 		grid.setPadding(new Insets(25, 25, 25, 25));
-
+		// Changed view size
 		Scene scene = new Scene(grid, 300, 200);
 		primaryStage.setScene(scene);
-//Helpasddfefdsasd
+
 		
 		
 		TextArea schedule = new TextArea();
