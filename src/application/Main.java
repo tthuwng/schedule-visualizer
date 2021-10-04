@@ -1,5 +1,7 @@
 package application;
 	
+import java.io.InputStream;
+
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -11,6 +13,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
@@ -21,12 +24,21 @@ import javafx.scene.text.Text;
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
+		// Setting up the window
+		primaryStage.setTitle("Schedulizer");
+		/**
+		InputStream iconStream = getClass().getResourceAsStream("/icon.png"); //Adding icon for the app
+		Image image = new Image(iconStream);
+		primaryStage.getIcons().add(image);**/
+		
 		GridPane grid = new GridPane();
 		grid.setHgap(50);
 		grid.setVgap(10);
 		grid.setPadding(new Insets(25, 25, 25, 25));
 		// Changed view sizes
 		Scene scene = new Scene(grid, 300, 200);
+		// To link with the application.css
+		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		primaryStage.setScene(scene);
 
 		
@@ -76,7 +88,6 @@ public class Main extends Application {
 			}
 		
 		});
-		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		primaryStage.show();
 	}
 	
