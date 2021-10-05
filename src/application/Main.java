@@ -37,7 +37,7 @@ public class Main extends Application {
 			Scene scene1 = new Scene(window, 400, 200);
 			window.getChildren().add(message);
 			Stage newWindow = new Stage();
-			newWindow.setTitle(message);
+			newWindow.setTitle("jn");
 			newWindow.setScene(scene1);
 			newWindow.show();
         });
