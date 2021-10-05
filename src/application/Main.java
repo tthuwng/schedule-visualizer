@@ -15,13 +15,14 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		primaryStage.setTitle("Schedulizer");
+		
 		GridPane grid = new GridPane();
-		grid.setHgap(5);
-		grid.setVgap(5);
 		grid.setPadding(new Insets(20));
 		
 		//Text Area
 		TextArea textArea = new TextArea();
+		textArea.setPrefHeight(1080);
+		textArea.setPrefWidth(1920);
 		grid.add(textArea, 0, 0);
 		
 		//Submit Button
@@ -42,7 +43,7 @@ public class Main extends Application {
 			newWindow.show();
         });
 		
-		Scene scene = new Scene(grid, 500, 200);
+		Scene scene = new Scene(grid, 500, 500);
 		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		primaryStage.setScene(scene);
 		primaryStage.show();
