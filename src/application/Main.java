@@ -22,6 +22,8 @@ public class Main extends Application {
 		
 		//Text Area
 		TextArea textArea = new TextArea();
+		textArea.setPrefWidth(950);
+		textArea.setPrefHeight(950);
 		grid.add(textArea, 0, 0);
 		
 		//Submit Button
@@ -45,7 +47,7 @@ public class Main extends Application {
 			Label message = new Label (outputResult);
 			StackPane window = new StackPane();
 			
-			Scene scene1 = new Scene(window, 400, 200);
+			Scene scene1 = new Scene(window, 1000, 1000);
 			window.getChildren().add(message);
 			Stage newWindow = new Stage();
 			newWindow.setTitle(outputResult);
@@ -53,7 +55,7 @@ public class Main extends Application {
 			newWindow.show();
         });
 		
-		Scene scene = new Scene(grid, 500, 200);
+		Scene scene = new Scene(grid, 1000, 1000);
 		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		primaryStage.setScene(scene);
 		primaryStage.show();
