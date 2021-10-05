@@ -4,9 +4,9 @@ package application;
 import java.util.ArrayList;
 
 public class TextHandler {
-	private static final String WEEKDAYS = "Monday Tuesday Wednesday Thursday Friday Saturday Sunday";
+	private static final String WEEKDAYS = "M Tu W Th F Sa Su";
 	
-	private String text;
+	private String text;/*
 	// basic name and info of course
 	private String term;
 	private String status;
@@ -28,16 +28,19 @@ public class TextHandler {
 
 	private int numCredits;
 	private String academicLevel;
-
+*/
 	public TextHandler(String text) {
 		this.text = text;
 		handlingText();
 	}
-
 	private void handlingText() {
-		String[] arrText = text.trim().split("\n\n|\n");
+		String[] arrText = text.trim().split("\n\n|\n|\\s\n");
+		for (int i = 0; i < arrText.length; i++) {
+			System.out.println(arrText[i]);
+		}
 		// Split the extra \n in each line is there is two downline then split or 1 down
 		// line -> split
+		/*
 		int i = 0;
 		while (i < arrText.length) {
 			this.term = arrText[i];
@@ -48,9 +51,9 @@ public class TextHandler {
 			// System.out.print(startDate + " " + endDate + "\n");
 			
 			i += 8;
-		}
+		}*/
 	}
-
+/*
 	private void splitCourseCodeAndName(String arrText) {
 		String[] courseCodeAndName = arrText.split(" ", 2); // split the course line into the course code and title by
 															// the first "space"
@@ -77,6 +80,6 @@ public class TextHandler {
 				}
 			}
 		}
-	}
+	}*/
 	
 }
