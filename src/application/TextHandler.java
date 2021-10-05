@@ -34,7 +34,8 @@ public class TextHandler {
 		handlingText();
 	}
 	private void handlingText() {
-		String[] arrText = text.trim().split("\n\n|\n|\\s\n");
+		String[] arrText = text.trim().split("\\s\n|\n\n|\n"); //to split some of the special cases seen in the example
+		
 		for (int i = 0; i < arrText.length; i++) {
 			System.out.println(arrText[i]);
 		}
