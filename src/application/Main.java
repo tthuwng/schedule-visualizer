@@ -30,25 +30,14 @@ public class Main extends Application {
 		
 		submitButton.setOnAction(action -> {
 			TextHandler runText = new TextHandler(textArea.getText());
-			String[] inputText = textArea.getText().split("\"|\\s");
-			int countThe = 0;
-			for (int i = 0; i < inputText.length; i++) {
-				if (inputText[i].equalsIgnoreCase("the")) {
-					countThe++;
-				}
-			}
-			String s = "s";
-			if (countThe <= 1) {
-				s = "";
-			}
-			String outputResult = "\"The\" appears " + countThe + " time" + s + " in the text";
-			Label message = new Label (outputResult);
+			
+			Label message = new Label ("Calendar appear here!");
 			StackPane window = new StackPane();
 			
 			Scene scene1 = new Scene(window, 400, 200);
 			window.getChildren().add(message);
 			Stage newWindow = new Stage();
-			newWindow.setTitle(outputResult);
+			newWindow.setTitle(message);
 			newWindow.setScene(scene1);
 			newWindow.show();
         });
