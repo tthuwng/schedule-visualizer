@@ -28,9 +28,7 @@ public class MainView extends Application {
 	
 	@Override
 	public void start(Stage primaryStage) {
-		
-		
-primaryStage.setTitle("Schedulizer");
+		primaryStage.setTitle("Schedulizer");
 		
 		GridPane grid = new GridPane();
 		grid.setPadding(new Insets(20));
@@ -54,13 +52,13 @@ primaryStage.setTitle("Schedulizer");
 			Scene scene1 = new Scene(window, 400, 200);
 			window.getChildren().add(message);
 			Stage newWindow = new Stage();
-			newWindow.setTitle("Calendar");
+			newWindow.setTitle("jn");
 			newWindow.setScene(scene1);
 			newWindow.show();
         });
 		
 		Scene scene = new Scene(grid, 500, 500);
-//		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		
@@ -73,4 +71,3 @@ primaryStage.setTitle("Schedulizer");
 		launch(args);
 	}
 }
-
