@@ -60,7 +60,7 @@ primaryStage.setTitle("Schedulizer");
         });
 		
 		Scene scene = new Scene(grid, 500, 500);
-//		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		
