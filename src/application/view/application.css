@@ -7,7 +7,7 @@
 	-fx-text-fill: white;
 	-fx-font-family: "DIN";
 	-fx-font-weight: bold;
-	-fx-background-color: linear-gradient(#005270, #44c7f4);
+	-fx-background-color: linear-gradient(#44c7f4, #005270);
 	-fx-effect: dropshadow( three-pass-box, rgba(0,0,0,0.6), 5, 0.0, 0, 1);
 	-fx-background-radius: 1em;
 	-fx-pref-width: 100px;
@@ -15,5 +15,5 @@
 }
 
 .button:hover {
-	-fx-background-color: linear-gradient(#44c7f4, #005270);
+	-fx-background-color: linear-gradient(#005270, #44c7f4);
 }
