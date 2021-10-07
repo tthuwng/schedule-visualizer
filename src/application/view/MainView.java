@@ -49,7 +49,7 @@ public class MainView extends Application {
 			Label message = new Label ("Calendar appear here!");
 			StackPane window = new StackPane();
 			
-			Scene scene1 = new Scene(window, 400, 200);
+			Scene scene1 = new Scene(window, 1500, 800);
 			window.getChildren().add(message);
 			Stage newWindow = new Stage();
 			newWindow.setTitle("jn");
