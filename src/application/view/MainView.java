@@ -34,8 +34,8 @@ public class MainView extends Application {
 		primaryStage.setTitle("Schedulizer");
 		TabPane tabPane = new TabPane();
 		
-		setTab1(tabPane);
-		setTab2(tabPane);
+		setTab1(tabPane);// Parse Text Tab
+		setTab2(tabPane);// Create Tab
 		
 		
 		
@@ -50,7 +50,12 @@ public class MainView extends Application {
 		
 		
 	}
-	
+	/**
+	 * setTab1 is to create the Tab of the Parse Text
+	 * User can use this class to parse their schedule that they copy from their Arches.
+	 * 
+	 * @param tabPane
+	 */
 	private void setTab1(TabPane tabPane) {
 		Tab tab1 = new Tab("Parse Text");
 		tab1.setClosable(false);
@@ -86,6 +91,12 @@ public class MainView extends Application {
 		tab1.setContent(grid);
 		tabPane.getTabs().add(tab1);
 	}
+	
+	/**
+	 * setTab2 allows user to manually plug in their schedules class by class
+	 * 
+	 * @param tabPane
+	 */
 	private void setTab2(TabPane tabPane) {
 		Tab tab2 = new Tab("Create");
 		tab2.setClosable(false);
