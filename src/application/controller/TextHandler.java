@@ -29,8 +29,7 @@ public class TextHandler {
 				}
 				schedule[c][i] = inputText[varCount];
 				varCount++;
-				
-				
+					
 			}
 		}
 	}
