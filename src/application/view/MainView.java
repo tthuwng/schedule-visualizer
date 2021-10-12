@@ -76,8 +76,17 @@ public class MainView extends Application {
 		
 		submitButton.setOnAction(action -> {
 			TextHandler runText = new TextHandler(textArea.getText());
+			String[][] schedule = runText.getSchedule();
+			String outputResult1 = "" +schedule[0][0] + " " +schedule[0][1] + " " +schedule[0][2] + " " +schedule[0][3] + " " +schedule[0][4] + " " +schedule[0][5] +" " +schedule[0][6] + " " +schedule[0][8] + " " +schedule[0][9] + " " +schedule[0][10];
 			
-			Label message = new Label ("Calendar appear here!");
+			String outputResult2 = "" +schedule[1][0] + " " +schedule[1][1] + " " +schedule[1][2] + " " +schedule[1][3] + " " +schedule[1][4] + " " +schedule[1][5] + " "+schedule[1][6] + " " +schedule[1][8] + " " +schedule[1][9] + " " +schedule[1][10];
+			
+			String outputResult3 = "" +schedule[2][0] + " " +schedule[2][1] + " " +schedule[2][2] + " " +schedule[2][3] + " " +schedule[2][4] + " " +schedule[2][5] + " " +schedule[2][6] + " "+schedule[2][8] + " " +schedule[2][9] + " " +schedule[2][10];
+			
+			String outputResult4 = "" +schedule[3][0] + " " +schedule[3][1] + " " +schedule[3][2] + " " +schedule[3][3] + " " +schedule[3][4] + " " +schedule[3][5] + " "+schedule[3][6] + " " +schedule[3][8] + " " +schedule[3][9] + " " +schedule[3][10];
+			
+			
+			Label message = new Label (outputResult1 + "\n" + outputResult2 + "\n" + outputResult3 + "\n" + outputResult4);
 			StackPane window = new StackPane();
 			
 			Scene scene1 = new Scene(window, 1500, 800);
