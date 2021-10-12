@@ -18,12 +18,15 @@ public class TextHandler {
 		}
 		
 		int classAMT = varCount/11;
-		schedule = new String[classAMT][12];
+		schedule = new String[classAMT][13];
 		varCount = 12;
 		for(int c = 0; c<classAMT; c++)
 		{
-			for (int i = 0; i < 11; i++) {
-				
+			for (int i = 0; i < 12; i++) {
+				if(inputText[varCount].contains(","))
+				{
+					i = 11;
+				}
 				schedule[c][i] = inputText[varCount];
 				varCount++;
 				
