@@ -5,12 +5,15 @@ import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.stage.Stage;
+import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
@@ -109,6 +112,58 @@ public class MainView extends Application {
 	private void setTab2(TabPane tabPane) {
 		Tab tab2 = new Tab("Create");
 		tab2.setClosable(false);
+		GridPane grid = new GridPane();
+		grid.setPadding(new Insets(5));
+		grid.setHgap(5);
+		grid.setVgap(5);
+		
+		// Area to input
+		Label label1 = new Label("Course Code");
+		TextField courseCode = new TextField();
+		grid.add(label1, 0, 0);
+		grid.add(courseCode, 1, 0);
+		
+		Label label2 = new Label("Title");
+		TextField courseTitle = new TextField();
+		grid.add(label2, 0, 1);
+		grid.add(courseTitle, 1, 1);
+		
+		Label label3 = new Label("Credit#");
+		TextField courseCredits = new TextField();
+		grid.add(label3, 0, 2);
+		grid.add(courseCredits, 1, 2);
+		
+		Label label4 = new Label("Start date");
+		TextField startDate = new TextField();
+		grid.add(label4, 0, 3);
+		grid.add(startDate, 1, 3);
+		
+		Label label5 = new Label("End date");
+		TextField endDate = new TextField();
+		grid.add(label5, 2, 3);
+		grid.add(endDate, 3, 3);
+		
+		Group weekdays = new Group();
+		
+		CheckBox sun = new CheckBox("Sun");
+		CheckBox mon = new CheckBox("Mon");
+		CheckBox tue = new CheckBox("Tue");
+		CheckBox wed = new CheckBox("Wed");
+		CheckBox thu = new CheckBox("Thu");
+		CheckBox fri = new CheckBox("Fri");
+		CheckBox sat = new CheckBox("Sat");
+
+		weekdays.getChildren().add(sun);
+		weekdays.getChildren().add(mon);
+		weekdays.getChildren().add(tue);
+		weekdays.getChildren().add(wed);
+		weekdays.getChildren().add(thu);
+		weekdays.getChildren().add(fri);
+		weekdays.getChildren().add(sat);
+		
+		grid.add(weekdays, 1, 4);
+		
+		tab2.setContent(grid);
 		tabPane.getTabs().add(tab2);
 	}
 	
