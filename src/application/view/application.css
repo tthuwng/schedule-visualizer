@@ -1,24 +1,56 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
 
-.submit-button {
+.submit-button, .add-course-button {
 	-fx-text-fill: white;
-	-fx-font-family: "DIN";
 	-fx-font-weight: bold;
-	-fx-background-color: linear-gradient(#005270, #44c7f4);
-	-fx-effect: dropshadow( three-pass-box, #44c7f4, 5, 0.0, 0, 1);
+	-fx-background-color: #1C77C3;
 	-fx-background-radius: 1em;
 	-fx-pref-width: 100px;
-	-fx-pref-height: 50px;
+	-fx-max-height: 50px;
+	
 }
 
 #app-title {
 	-fx-font: 50px Helvetica;
-	-fx-font-weight: 500;
+	-fx-font-weight: bold;
 	-fx-fill: #271f30;
 	
 }
 .submit-button:hover {
-	-fx-background-color: linear-gradient(#f95738, #e3de8f);
-	-fx-effect: dropshadow( three-pass-box, #f95738, 5, 0.0, 0, 1);
+	-fx-background-color: #f95738;
+}
+.add-course-button:hover {
+	-fx-background-color: #E3DE8F;
 }
 
+.tab-pane {
+	-fx-background-color: white;
+}
+
+.tab-header-background {
+	-fx-background-color: #B9D6F2;
+}
+
+.tab-label {
+	-fx-font-weight: bold;
+}
+.parse-text-tab:selected {
+	-fx-background-color: #1C77C3;
+}
+.parse-text-tab:selected .tab-label{
+	-fx-text-fill: white;
+}
+.parse-text-tab2:selected {
+	-fx-background-color: #E3DE8F;
+}
+.parse-text-tab2:selected .tab-label{
+}
+
+.text-area .content {
+}
+
+.title-grid {
+	-fx-background-color: white;
+}
+.text-area .content {
+}
