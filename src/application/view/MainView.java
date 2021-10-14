@@ -152,6 +152,7 @@ public class MainView extends Application {
 			message.setText(outputResult1 + "\n" + outputResult2 + "\n" + outputResult3 + "\n" + outputResult4);
 		} else {
 			message.setText("You entered nothing :<");
+			System.out.println("HELL THIS IS A MESSAGE");
 		}
 		
 		StackPane window = new StackPane();
