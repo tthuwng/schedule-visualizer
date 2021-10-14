@@ -27,14 +27,14 @@ public class TextHandler {
 		int varCount = 0;
 		
 		
-		for (int i = 12; i < inputText.length; i++) {
+		for (int i = 0; i < inputText.length; i++) {
 			varCount++;
 		}
 		
 		int classAMT = varCount/11;
 		schedule = new String[classAMT][13];
 		
-		varCount = 12;
+		varCount = 0;
 		for(int c = 0; c<classAMT; c++)
 		{
 			for (int i = 0; i < 12; i++) {
