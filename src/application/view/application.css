@@ -1,16 +1,24 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
 
-.button {
+.submit-button {
 	-fx-text-fill: white;
 	-fx-font-family: "DIN";
 	-fx-font-weight: bold;
-	-fx-background-color: linear-gradient(#44c7f4, #005270);
-	-fx-effect: dropshadow( three-pass-box, rgba(0,0,0,0.6), 5, 0.0, 0, 1);
+	-fx-background-color: linear-gradient(#005270, #44c7f4);
+	-fx-effect: dropshadow( three-pass-box, #44c7f4, 5, 0.0, 0, 1);
 	-fx-background-radius: 1em;
 	-fx-pref-width: 100px;
 	-fx-pref-height: 50px;
 }
 
-.button:hover {
-	-fx-background-color: linear-gradient(#005270, #44c7f4);
+#app-title {
+	-fx-font: 50px Helvetica;
+	-fx-font-weight: 500;
+	-fx-fill: #271f30;
+	
 }
+.submit-button:hover {
+	-fx-background-color: linear-gradient(#f95738, #e3de8f);
+	-fx-effect: dropshadow( three-pass-box, #f95738, 5, 0.0, 0, 1);
+}
+
