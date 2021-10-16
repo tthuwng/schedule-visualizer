@@ -314,6 +314,55 @@ public class MainView extends Application {
 				@Override
 				public void handle(ActionEvent event) {
 					
+					String classDays = "";
+					if (sun.isSelected() == true){
+						classDays+= "S ";
+					}
+					if (mon.isSelected() == true){
+						classDays+= "M ";
+					}
+					if (tue.isSelected() == true){
+						classDays+= "Tu ";
+					}
+					if (wed.isSelected() == true){
+						classDays+= "W ";
+					}
+					if (thu.isSelected() == true){
+						classDays+= "Th ";
+					}
+					if (fri.isSelected() == true){
+						classDays+= "F ";
+					}
+					if (sat.isSelected() == true){
+						classDays+= "Sat ";
+					}
+									
+					String[] customSchedule = new String[11];
+					customSchedule[1] = courseCode.getText();
+					customSchedule[2] = courseTitle.getText();
+					customSchedule[3] = courseCredits.getText();
+					customSchedule[4] = startDate.getValue().toString();
+					customSchedule[5] = endDate.getValue().toString();
+					customSchedule[6] = classDays;
+					customSchedule[7] = null; //TODOedit this for start time
+					customSchedule[8] = null; //TODOedit this for end time
+					customSchedule[9] = location.getText();
+					customSchedule[10] = roomNumber.getText();
+					customSchedule[11] = facultyName.getText();
+					
+					//Resetting the textfields to be blank
+					courseCode.clear();
+					courseTitle.clear();
+					courseCredits.clear();
+					startDate.setValue(null);
+					endDate.setValue(null);
+					classDays = null;
+					//courseCode.clear(); Reset start time
+					//courseCode.clear(); Reset end time
+					location.clear();
+					roomNumber.clear();
+					facultyName.clear();
+					
 				}
 	});
 		}
