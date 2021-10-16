@@ -7,6 +7,8 @@ import application.controller.TextHandler;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.stage.Stage;
@@ -306,8 +308,16 @@ public class MainView extends Application {
 		
 		tab2.setContent(primaryGrid);
 		tabPane.getTabs().add(tab2);
-	}
+		
+		addCourseButton.setOnAction(new EventHandler<ActionEvent>() {
 
+				@Override
+				public void handle(ActionEvent event) {
+					
+				}
+	});
+		}
+	
 	public static void main(String[] args) {
 		launch(args);
 	}
