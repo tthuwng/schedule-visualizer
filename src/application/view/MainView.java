@@ -353,7 +353,12 @@ public class MainView extends Application {
 				customSchedule[9] = roomNumber.getText();
 				customSchedule[10] = facultyName.getText();
 				
-				//Resetting the textfields to be blank
+			//Debugging and making sure I actually get what I was fucking looking for comment this out or remove it if you dont need it anymore (look in console window)
+				for (int i = 0; i < 11; i++) {
+					System.out.println(customSchedule[i]);
+				}
+				
+				//Resetting the textfields to beblank
 				courseCode.clear();
 				courseTitle.clear();
 				courseCredits.clear();
