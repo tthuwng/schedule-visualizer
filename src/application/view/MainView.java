@@ -311,12 +311,82 @@ public class MainView extends Application {
 		
 		addCourseButton.setOnAction(new EventHandler<ActionEvent>() {
 
-				@Override
-				public void handle(ActionEvent event) {
-					
+			@Override
+			public void handle(ActionEvent event) {
+				
+				String classDays = "";
+				if (sun.isSelected() == true){
+					classDays+= "S ";
 				}
-	});
-		}
+				if (mon.isSelected() == true){
+					classDays+= "M ";
+				}
+				if (tue.isSelected() == true){
+					classDays+= "Tu ";
+				}
+				if (wed.isSelected() == true){
+					classDays+= "W ";
+				}
+				if (thu.isSelected() == true){
+					classDays+= "Th ";
+				}
+				if (fri.isSelected() == true){
+					classDays+= "F ";
+				}
+				if (sat.isSelected() == true){
+					classDays+= "Sat ";
+				}
+			
+				String timeOp1 = startTime.getText() + timeOption1.getValue().toString();
+				String timeOp2 = endTime.getText() +  timeOption2.getValue().toString();
+				
+				String[] customSchedule = new String[11];
+				customSchedule[0] = courseCode.getText();
+				customSchedule[1] = courseTitle.getText();
+				customSchedule[2] = courseCredits.getText();
+				customSchedule[3] = startDate.getValue().toString();
+				customSchedule[4] = endDate.getValue().toString();
+				customSchedule[5] = classDays;
+				customSchedule[6] = timeOp1; 
+				customSchedule[7] = timeOp2; 
+				customSchedule[8] = location.getText();
+				customSchedule[9] = roomNumber.getText();
+				customSchedule[10] = facultyName.getText();
+				
+			//Debugging and making sure I actually get what I was fucking looking for comment this out or remove it if you dont need it anymore (look in console window)
+				for (int i = 0; i < 11; i++) {
+					System.out.println(customSchedule[i]);
+				}
+				
+				//Resetting the textfields to beblank
+				courseCode.clear();
+				courseTitle.clear();
+				courseCredits.clear();
+				startDate.setValue(null);
+				endDate.setValue(null);
+				classDays = null;
+				
+				sun.setSelected(false);
+				mon.setSelected(false);
+				tue.setSelected(false);
+				wed.setSelected(false);
+				thu.setSelected(false);
+				fri.setSelected(false);
+				sat.setSelected(false);
+				
+				timeOption1.setValue(null);
+				timeOption2.setValue(null);
+				startTime.clear(); 
+				endTime.clear();
+				location.clear();
+				roomNumber.clear();
+				facultyName.clear();
+				
+			}
+});
+	}
+		
+	
 	
 	public static void main(String[] args) {
 		launch(args);
