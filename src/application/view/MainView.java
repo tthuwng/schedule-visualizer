@@ -311,12 +311,63 @@ public class MainView extends Application {
 		
 		addCourseButton.setOnAction(new EventHandler<ActionEvent>() {
 
-				@Override
-				public void handle(ActionEvent event) {
-					
+			@Override
+			public void handle(ActionEvent event) {
+				
+				String classDays = "";
+				if (sun.isSelected() == true){
+					classDays+= "S ";
 				}
-	});
-		}
+				if (mon.isSelected() == true){
+					classDays+= "M ";
+				}
+				if (tue.isSelected() == true){
+					classDays+= "Tu ";
+				}
+				if (wed.isSelected() == true){
+					classDays+= "W ";
+				}
+				if (thu.isSelected() == true){
+					classDays+= "Th ";
+				}
+				if (fri.isSelected() == true){
+					classDays+= "F ";
+				}
+				if (sat.isSelected() == true){
+					classDays+= "Sat ";
+				}
+								
+				String[] customSchedule = new String[1];
+				customSchedule[0] = courseCode.getText();
+				customSchedule[1] = courseTitle.getText();
+				customSchedule[2] = courseCredits.getText();
+				customSchedule[3] = startDate.getValue().toString();
+				customSchedule[4] = endDate.getValue().toString();
+				customSchedule[5] = classDays;
+				customSchedule[6] = null; //TODOedit this for start time
+				customSchedule[7] = null; //TODOedit this for end time
+				customSchedule[8] = location.getText();
+				customSchedule[9] = roomNumber.getText();
+				customSchedule[10] = facultyName.getText();
+				
+				//Resetting the textfields to be blank
+				courseCode.clear();
+				courseTitle.clear();
+				courseCredits.clear();
+				startDate.setValue(null);
+				endDate.setValue(null);
+				classDays = null;
+				//courseCode.clear(); Reset start time
+				//courseCode.clear(); Reset end time
+				location.clear();
+				roomNumber.clear();
+				facultyName.clear();
+				
+			}
+});
+	}
+		
+	
 	
 	public static void main(String[] args) {
 		launch(args);
