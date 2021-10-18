@@ -336,7 +336,10 @@ public class MainView extends Application {
 				if (sat.isSelected() == true){
 					classDays+= "Sat ";
 				}
-								
+			
+				String timeOp1 = startTime.getText() + timeOption1.getValue().toString();
+				String timeOp2 = endTime.getText() +  timeOption2.getValue().toString();
+				
 				String[] customSchedule = new String[11];
 				customSchedule[0] = courseCode.getText();
 				customSchedule[1] = courseTitle.getText();
@@ -344,8 +347,8 @@ public class MainView extends Application {
 				customSchedule[3] = startDate.getValue().toString();
 				customSchedule[4] = endDate.getValue().toString();
 				customSchedule[5] = classDays;
-				customSchedule[6] = null; //TODOedit this for start time
-				customSchedule[7] = null; //TODOedit this for end time
+				customSchedule[6] = timeOp1; 
+				customSchedule[7] = timeOp2; 
 				customSchedule[8] = location.getText();
 				customSchedule[9] = roomNumber.getText();
 				customSchedule[10] = facultyName.getText();
@@ -357,8 +360,19 @@ public class MainView extends Application {
 				startDate.setValue(null);
 				endDate.setValue(null);
 				classDays = null;
-				//courseCode.clear(); Reset start time
-				//courseCode.clear(); Reset end time
+				
+				sun.setSelected(false);
+				mon.setSelected(false);
+				tue.setSelected(false);
+				wed.setSelected(false);
+				thu.setSelected(false);
+				fri.setSelected(false);
+				sat.setSelected(false);
+				
+				timeOption1.setValue(null);
+				timeOption2.setValue(null);
+				startTime.clear(); 
+				endTime.clear();
 				location.clear();
 				roomNumber.clear();
 				facultyName.clear();
