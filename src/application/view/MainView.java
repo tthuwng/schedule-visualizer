@@ -337,7 +337,7 @@ public class MainView extends Application {
 					classDays+= "Sat ";
 				}
 								
-				String[] customSchedule = new String[1];
+				String[] customSchedule = new String[11];
 				customSchedule[0] = courseCode.getText();
 				customSchedule[1] = courseTitle.getText();
 				customSchedule[2] = courseCredits.getText();
