@@ -4,6 +4,7 @@ import java.awt.Dimension;
 import java.time.LocalDateTime;
 
 import application.controller.TextHandler;
+import application.model.Course;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -36,6 +37,7 @@ public class MainView extends Application {
 	private final double COMPUTER_WIDTH = screenSize.getWidth()-100;
 	private final double COMPUTER_HEIGHT = screenSize.getHeight()-100;
 	private final Image APP_ICON = new Image(getClass().getResourceAsStream("images/logo.png"));
+	private final String pattern = "mm-dd-yyyy";
 	
 	private final ObservableList<String> timeOptions = FXCollections.observableArrayList("AM", "PM");
 	/*private Stage stage;
@@ -283,6 +285,8 @@ public class MainView extends Application {
 		courseCode.setPromptText("REGL-100");
 		courseTitle.setPromptText("Intro to Ethics");
 		courseCredits.setPromptText("2");
+		startDate.setPromptText(pattern.toLowerCase());
+		endDate.setPromptText(pattern.toLowerCase());
 		startTime.setPromptText("9:00");
 		endTime.setPromptText("10:00");
 		location.setPromptText("Old Main");
@@ -353,7 +357,10 @@ public class MainView extends Application {
 				customSchedule[9] = roomNumber.getText();
 				customSchedule[10] = facultyName.getText();
 				
-			//Debugging and making sure I actually get what I was fucking looking for comment this out or remove it if you dont need it anymore (look in console window)
+				// this for Course Class testing
+				Course newCourse = new Course(customSchedule[0], customSchedule[1], customSchedule[3], customSchedule[4], customSchedule[6], customSchedule[7], classDays);
+				System.out.println(newCourse.toString());
+				//Debugging and making sure I actually get what I was fucking looking for comment this out or remove it if you dont need it anymore (look in console window)
 				for (int i = 0; i < 11; i++) {
 					System.out.println(customSchedule[i]);
 				}
