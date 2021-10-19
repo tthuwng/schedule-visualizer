@@ -25,6 +25,22 @@ public class Course {
 		weekdaysList = weekdays.split(" ");
 	}
 	
+	public void addCourseCredit(String credit) {
+		this.creditNumber = Integer.parseInt(credit);
+	}
+	
+	public void addLocation(String location) {
+		this.location = location;
+	}
+	
+	public void addFaculty(String name) {
+		faculty = name;
+	}
+	
+	public void addNewTimeFrame(String startTime, String endTime, String weekdays) {
+		Course secondaryCourse = new Course(courseCode, title, startDate, endDate, startTime, endTime, weekdays);
+	}
+	
 	@Override
 	public String toString() {
 		// this is for testing the weekdays case
