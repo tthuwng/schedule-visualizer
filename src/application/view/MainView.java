@@ -247,7 +247,7 @@ public class MainView extends Application {
 		GridPane startTimeGrid = new GridPane();
 		Label label7 = new Label("Start time");
 		TextField startTime = new TextField();
-		ComboBox timeOption1 = new ComboBox(timeOptions);
+		ComboBox<String> timeOption1 = new ComboBox<String>(timeOptions);
 		startTime.setMaxWidth(60);
 		timeOption1.setMaxWidth(70);
 		grid.add(label7, 0, 5);
@@ -257,7 +257,7 @@ public class MainView extends Application {
 		
 		GridPane endTimeGrid = new GridPane();
 		Label label8 = new Label("End time");
-		ComboBox timeOption2 = new ComboBox(timeOptions);
+		ComboBox<String> timeOption2 = new ComboBox<String>(timeOptions);
 		TextField endTime = new TextField();
 		endTime.setMaxWidth(60);
 		timeOption2.setMaxWidth(70);
