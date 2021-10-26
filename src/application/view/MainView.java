@@ -4,9 +4,12 @@ import java.awt.Dimension;
 import java.time.LocalDateTime;
 
 import application.controller.TextHandler;
+import application.model.Course;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.stage.Stage;
@@ -34,6 +37,7 @@ public class MainView extends Application {
 	private final double COMPUTER_WIDTH = screenSize.getWidth()-100;
 	private final double COMPUTER_HEIGHT = screenSize.getHeight()-100;
 	private final Image APP_ICON = new Image(getClass().getResourceAsStream("images/logo.png"));
+	private final String pattern = "mm/dd/yyyy";
 	
 	private final ObservableList<String> timeOptions = FXCollections.observableArrayList("AM", "PM");
 	/*private Stage stage;
@@ -243,7 +247,7 @@ public class MainView extends Application {
 		GridPane startTimeGrid = new GridPane();
 		Label label7 = new Label("Start time");
 		TextField startTime = new TextField();
-		ComboBox timeOption1 = new ComboBox(timeOptions);
+		ComboBox<String> timeOption1 = new ComboBox<String>(timeOptions);
 		startTime.setMaxWidth(60);
 		timeOption1.setMaxWidth(70);
 		grid.add(label7, 0, 5);
@@ -253,7 +257,7 @@ public class MainView extends Application {
 		
 		GridPane endTimeGrid = new GridPane();
 		Label label8 = new Label("End time");
-		ComboBox timeOption2 = new ComboBox(timeOptions);
+		ComboBox<String> timeOption2 = new ComboBox<String>(timeOptions);
 		TextField endTime = new TextField();
 		endTime.setMaxWidth(60);
 		timeOption2.setMaxWidth(70);
@@ -281,6 +285,8 @@ public class MainView extends Application {
 		courseCode.setPromptText("REGL-100");
 		courseTitle.setPromptText("Intro to Ethics");
 		courseCredits.setPromptText("2");
+		startDate.setPromptText(pattern.toLowerCase());
+		endDate.setPromptText(pattern.toLowerCase());
 		startTime.setPromptText("9:00");
 		endTime.setPromptText("10:00");
 		location.setPromptText("Old Main");
@@ -306,8 +312,89 @@ public class MainView extends Application {
 		
 		tab2.setContent(primaryGrid);
 		tabPane.getTabs().add(tab2);
-	}
+		
+		addCourseButton.setOnAction(new EventHandler<ActionEvent>() {
 
+			@Override
+			public void handle(ActionEvent event) {
+				
+				String classDays = "";
+				if (sun.isSelected() == true){
+					classDays+= "S ";
+				}
+				if (mon.isSelected() == true){
+					classDays+= "M ";
+				}
+				if (tue.isSelected() == true){
+					classDays+= "Tu ";
+				}
+				if (wed.isSelected() == true){
+					classDays+= "W ";
+				}
+				if (thu.isSelected() == true){
+					classDays+= "Th ";
+				}
+				if (fri.isSelected() == true){
+					classDays+= "F ";
+				}
+				if (sat.isSelected() == true){
+					classDays+= "Sat ";
+				}
+			
+				String timeOp1 = startTime.getText() + timeOption1.getValue().toString();
+				String timeOp2 = endTime.getText() +  timeOption2.getValue().toString();
+				
+				String[] customSchedule = new String[11];
+				customSchedule[0] = courseCode.getText();
+				customSchedule[1] = courseTitle.getText();
+				customSchedule[2] = courseCredits.getText();
+				customSchedule[3] = startDate.getValue().toString();
+				customSchedule[4] = endDate.getValue().toString();
+				customSchedule[5] = classDays;
+				customSchedule[6] = timeOp1; 
+				customSchedule[7] = timeOp2; 
+				customSchedule[8] = location.getText();
+				customSchedule[9] = roomNumber.getText();
+				customSchedule[10] = facultyName.getText();
+				
+				// this for Course Class testing
+				Course newCourse = new Course(customSchedule[0], customSchedule[1], customSchedule[3], customSchedule[4], customSchedule[6], customSchedule[7], classDays);
+				System.out.println(newCourse.toString());
+				//Debugging and making sure I actually get what I was fucking looking for comment this out or remove it if you dont need it anymore (look in console window)
+				for (int i = 0; i < 11; i++) {
+					System.out.println(customSchedule[i]);
+				}
+				
+				//Resetting the textfields to beblank
+				courseCode.clear();
+				courseTitle.clear();
+				courseCredits.clear();
+				startDate.setValue(null);
+				endDate.setValue(null);
+				classDays = null;
+				
+				sun.setSelected(false);
+				mon.setSelected(false);
+				tue.setSelected(false);
+				wed.setSelected(false);
+				thu.setSelected(false);
+				fri.setSelected(false);
+				sat.setSelected(false);
+				
+				timeOption1.setValue(null);
+				timeOption2.setValue(null);
+				startTime.clear(); 
+				endTime.clear();
+				location.clear();
+				roomNumber.clear();
+				facultyName.clear();
+				
+			}
+});
+	}
+		
+	
+	
 	public static void main(String[] args) {
 		launch(args);
 	}

@@ -30,7 +30,7 @@ public class TextHandler {
 		for (int i = 0; i < inputText.length; i++) {
 			varCount++;
 		}
-		
+		varCount = varCount - 11;
 		int classAMT = varCount/11;
 		schedule = new String[classAMT][13];
 		
