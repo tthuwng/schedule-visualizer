@@ -2,6 +2,7 @@ package application.view;
 
 import java.awt.Dimension;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 
 import application.controller.TextHandler;
 import application.model.Course;
@@ -131,29 +132,11 @@ public class MainView extends Application {
 	private void parseTextSchedulize(TextArea textArea) {
 		Label message = new Label();
 		if (!textArea.getText().equals("")) {
-			TextHandler runText = new TextHandler(textArea.getText());
-			String[][] schedule = runText.getSchedule();
-			String outputResult1 = "" + schedule[0][0] + " " + schedule[0][1] + " " + schedule[0][2] + " "
-					+ schedule[0][3] + " " + schedule[0][4] + " " + schedule[0][5] + " " + schedule[0][6] + " "
-					+ schedule[0][7] + " " + schedule[0][8] + " " + schedule[0][9] + " " + schedule[0][10] + " "
-					+ schedule[0][11];
-
-			String outputResult2 = "" + schedule[1][0] + " " + schedule[1][1] + " " + schedule[1][2] + " "
-					+ schedule[1][3] + " " + schedule[1][4] + " " + schedule[1][5] + " " + schedule[1][6] + " "
-					+ schedule[1][7] + " " + schedule[1][8] + " " + schedule[1][9] + " " + schedule[1][10] + " "
-					+ schedule[1][11];
-
-			String outputResult3 = "" + schedule[2][0] + " " + schedule[2][1] + " " + schedule[2][2] + " "
-					+ schedule[2][3] + " " + schedule[2][4] + " " + schedule[2][5] + " " + schedule[2][6] + " "
-					+ schedule[2][7] + " " + schedule[2][8] + " " + schedule[2][9] + " " + schedule[2][10] + " "
-					+ schedule[2][11];
-
-			String outputResult4 = "" + schedule[3][0] + " " + schedule[3][1] + " " + schedule[3][2] + " "
-					+ schedule[3][3] + " " + schedule[3][4] + " " + schedule[3][5] + " " + schedule[3][6] + " "
-					+ schedule[3][7] + " " + schedule[3][8] + " " + schedule[3][9] + " " + schedule[3][10] + " "
-					+ schedule[3][11];
-
-			message.setText(outputResult1 + "\n" + outputResult2 + "\n" + outputResult3 + "\n" + outputResult4);
+			TextHandler parseText = new TextHandler(textArea.getText());
+			ArrayList<Course> courses = parseText.getCourseArray();
+			for (Course i : courses) {
+				System.out.println(i.toString());
+			}
 		} else {
 			message.setText("You entered nothing :<");
 			System.out.println("HELL THIS IS A MESSAGE");
@@ -358,8 +341,8 @@ public class MainView extends Application {
 				customSchedule[10] = facultyName.getText();
 				
 				// this for Course Class testing
-				Course newCourse = new Course(customSchedule[0], customSchedule[1], customSchedule[3], customSchedule[4], customSchedule[6], customSchedule[7], classDays);
-				System.out.println(newCourse.toString());
+				//Course newCourse = new Course(customSchedule[0], customSchedule[1], customSchedule[3], customSchedule[4], customSchedule[6], customSchedule[7], classDays);
+				//System.out.println(newCourse.toString());
 				//Debugging and making sure I actually get what I was fucking looking for comment this out or remove it if you dont need it anymore (look in console window)
 				for (int i = 0; i < 11; i++) {
 					System.out.println(customSchedule[i]);

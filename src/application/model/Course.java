@@ -51,11 +51,11 @@ public class Course {
 	public String getFaculty() {
 		return faculty;
 	}
-	/*
+	
 	@Override
 	public String toString() {
 		// this is for testing the weekdays case
-		
-	}*/
+		return courseCode + "||" + title + "||" + startTime + "||" + endTime + "||" + location + "||" + faculty; 
+	}
 
 }
