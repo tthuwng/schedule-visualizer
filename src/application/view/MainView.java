@@ -37,7 +37,7 @@ public class MainView extends Application {
 	private final double COMPUTER_WIDTH = screenSize.getWidth()-100;
 	private final double COMPUTER_HEIGHT = screenSize.getHeight()-100;
 	private final Image APP_ICON = new Image(getClass().getResourceAsStream("images/logo.png"));
-	private final String pattern = "mm-dd-yyyy";
+	private final String pattern = "mm/dd/yyyy";
 	
 	private final ObservableList<String> timeOptions = FXCollections.observableArrayList("AM", "PM");
 	/*private Stage stage;
