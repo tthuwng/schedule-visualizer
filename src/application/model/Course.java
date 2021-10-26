@@ -1,54 +1,61 @@
 package application.model;
 
 public class Course {
-	// primary variables
 	private String courseCode;
 	private String title;
-	private String startDate;
-	private String endDate;
+	private String[] weekdaysList;
+	private String location;
+	private String faculty;
 	private String startTime;
 	private String endTime;
-	private String[] weekdaysList;
-	// secondary variables
-	private int creditNumber;
-	private String location;
-	private String roomNumber;
-	private String faculty;
 	
-	public Course(String courseCode, String title, String startDate, String endDate, String startTime, String endTime, String weekdays) {
+	public Course(String courseCode, String title, String startTime, String endTime, String[] weekdaysList, String location, String faculty) {
 		this.courseCode = courseCode;
 		this.title = title;
-		this.startDate = startDate;
-		this.endDate = endDate;
 		this.startTime = startTime;
 		this.endTime = endTime;
-		weekdaysList = weekdays.split(" ");
-	}
-	
-	public void addCourseCredit(String credit) {
-		this.creditNumber = Integer.parseInt(credit);
-	}
-	
-	public void addLocation(String location) {
+		this.weekdaysList = weekdaysList;
 		this.location = location;
+		this.faculty = faculty;
 	}
 	
-	public void addFaculty(String name) {
-		faculty = name;
+	public Course addNewTimeFrame(String secondStartTime, String secondEndTime, String[] secondWeekdaysList) {
+		Course secondaryCourse = new Course(courseCode, title, secondStartTime, secondEndTime, secondWeekdaysList, location, faculty);
+		return secondaryCourse;
 	}
 	
-	public void addNewTimeFrame(String startTime, String endTime, String weekdays) {
-		Course secondaryCourse = new Course(courseCode, title, startDate, endDate, startTime, endTime, weekdays);
+	public String getCourseCode() {
+		return courseCode;
 	}
 	
+	public String getTitle() {
+		return title;
+	}
+	
+	public String[] getWeekdaysList() {
+		return weekdaysList;
+	}
+	
+	public String getStartTime() {
+		return startTime;
+	}
+	
+	public String getEndTime() {
+		return endTime;
+	}
+	
+	public String getLocation() {
+		return location;
+	}
+	
+	public String getFaculty() {
+		return faculty;
+	}
+	/*
 	@Override
 	public String toString() {
 		// this is for testing the weekdays case
-		String emptStr = "";
-		for (int i = 0; i < weekdaysList.length; i++) {
-			emptStr += weekdaysList[i] + "\n";
-		}
-		return emptStr;
-	}
+		
+	}*/
 
 }

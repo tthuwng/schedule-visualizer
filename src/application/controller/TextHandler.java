@@ -2,9 +2,12 @@ package application.controller;
 
 import java.util.ArrayList;
 
+import application.model.Course;
+
 public class TextHandler {
 	private String[] inputText;
-	private String[][] schedule;
+	//private String[][] schedule;
+	private ArrayList<Course> courseArray = new ArrayList<Course>();
 	private ArrayList<String> inputArray = new ArrayList<String>();
 	
 	public TextHandler(String textArea) {
@@ -20,6 +23,7 @@ public class TextHandler {
 	}
 	
 	private void runHandler() {
+		
 		int varCount = 0;
 		
 		for (int i = 0; i < inputText.length; i++) {
