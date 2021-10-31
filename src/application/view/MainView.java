@@ -187,21 +187,6 @@ public class MainView extends Application {
 		grid.add(label2, 0, 1);
 		grid.add(courseTitle, 1, 1);
 		
-		Label label3 = new Label("Credit#");
-		TextField courseCredits = new TextField();
-		grid.add(label3, 0, 2);
-		grid.add(courseCredits, 1, 2);
-		
-		Label label4 = new Label("Start date");
-		DatePicker startDate = new DatePicker();
-		grid.add(label4, 0, 3);
-		grid.add(startDate, 1, 3);
-		
-		Label label5 = new Label("End date");
-		DatePicker endDate = new DatePicker();
-		grid.add(label5, 2, 3);
-		grid.add(endDate, 3, 3);
-		
 		Label label6 = new Label("Weekdays");
 		GridPane weekGrid = new GridPane();
 		weekGrid.setPadding(new Insets(5));
@@ -216,7 +201,7 @@ public class MainView extends Application {
 		CheckBox fri = new CheckBox("Fri");
 		CheckBox sat = new CheckBox("Sat");
 		
-		grid.add(label6, 0, 4);
+		grid.add(label6, 0, 2);
 		weekGrid.add(sun, 0, 0);
 		weekGrid.add(mon, 1, 0);
 		weekGrid.add(tue, 2, 0);
@@ -225,7 +210,7 @@ public class MainView extends Application {
 		weekGrid.add(fri, 5, 0);
 		weekGrid.add(sat, 6, 0);
 		
-		grid.add(weekGrid, 1, 4, 3, 1);
+		grid.add(weekGrid, 1, 2, 3, 1);
 		
 		GridPane startTimeGrid = new GridPane();
 		Label label7 = new Label("Start time");
@@ -233,10 +218,10 @@ public class MainView extends Application {
 		ComboBox<String> timeOption1 = new ComboBox<String>(timeOptions);
 		startTime.setMaxWidth(60);
 		timeOption1.setMaxWidth(70);
-		grid.add(label7, 0, 5);
+		grid.add(label7, 0, 3);
 		startTimeGrid.add(startTime, 0, 0);
 		startTimeGrid.add(timeOption1, 1, 0);
-		grid.add(startTimeGrid, 1, 5);
+		grid.add(startTimeGrid, 1, 3);
 		
 		GridPane endTimeGrid = new GridPane();
 		Label label8 = new Label("End time");
@@ -244,32 +229,29 @@ public class MainView extends Application {
 		TextField endTime = new TextField();
 		endTime.setMaxWidth(60);
 		timeOption2.setMaxWidth(70);
-		grid.add(label8, 2, 5);
+		grid.add(label8, 2, 3);
 		endTimeGrid.add(endTime, 0, 0);
 		endTimeGrid.add(timeOption2, 1, 0);
-		grid.add(endTimeGrid, 3, 5);
+		grid.add(endTimeGrid, 3, 3);
 		
 		Label label9 = new Label("Location");
 		TextField location = new TextField();
-		grid.add(label9, 0, 6);
-		grid.add(location, 1, 6);
+		grid.add(label9, 0, 4);
+		grid.add(location, 1, 4);
 		
 		Label label10 = new Label("Room No.");
 		TextField roomNumber = new TextField();
-		grid.add(label10, 0, 7);
-		grid.add(roomNumber, 1, 7);
+		grid.add(label10, 0, 5);
+		grid.add(roomNumber, 1, 5);
 		
 		Label label11 = new Label("Faculty");
 		TextField facultyName = new TextField();
-		grid.add(label11, 0, 8);
-		grid.add(facultyName, 1, 8);
+		grid.add(label11, 0, 6);
+		grid.add(facultyName, 1, 6);
 	
 		//Add Prompt Texts into text field boxes
 		courseCode.setPromptText("REGL-100");
 		courseTitle.setPromptText("Intro to Ethics");
-		courseCredits.setPromptText("2");
-		startDate.setPromptText(pattern.toLowerCase());
-		endDate.setPromptText(pattern.toLowerCase());
 		startTime.setPromptText("9:00");
 		endTime.setPromptText("10:00");
 		location.setPromptText("Old Main");
@@ -330,9 +312,6 @@ public class MainView extends Application {
 				String[] customSchedule = new String[11];
 				customSchedule[0] = courseCode.getText();
 				customSchedule[1] = courseTitle.getText();
-				customSchedule[2] = courseCredits.getText();
-				customSchedule[3] = startDate.getValue().toString();
-				customSchedule[4] = endDate.getValue().toString();
 				customSchedule[5] = classDays;
 				customSchedule[6] = timeOp1; 
 				customSchedule[7] = timeOp2; 
@@ -351,9 +330,6 @@ public class MainView extends Application {
 				//Resetting the textfields to beblank
 				courseCode.clear();
 				courseTitle.clear();
-				courseCredits.clear();
-				startDate.setValue(null);
-				endDate.setValue(null);
 				classDays = null;
 				
 				sun.setSelected(false);

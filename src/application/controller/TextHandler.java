@@ -59,7 +59,7 @@ public class TextHandler{
 				weekdaysList = inputArray.get(i+5).split("\\s"); // the weekdays
 				
 				if (inputArray.get(i+7).contains(",")) {
-					location = inputArray.get(i+5) + inputArray.get(i+6);
+					location = inputArray.get(i+5) + " " + inputArray.get(i+6);
 					faculty = inputArray.get(i+7);
 					i += 8;
 					addCourse();
@@ -74,7 +74,7 @@ public class TextHandler{
 						String[] secondTimes = inputArray.get(i+8).split(" - ");
 						String secondStartTime = secondTimes[0];
 						String secondEndTime = secondTimes[1];
-						location = inputArray.get(i+9) + inputArray.get(i+10);
+						location = inputArray.get(i+9) + " " + inputArray.get(i+10);
 						faculty = inputArray.get(i+11);
 						Course createACourse = new Course(courseCode, title, startTime, endTime, weekdaysList, location, faculty);
 						courseArray.add(createACourse);
@@ -83,7 +83,7 @@ public class TextHandler{
 						
 					} else {
 						// for normal course
-						location = inputArray.get(i+7) + inputArray.get(i+8);
+						location = inputArray.get(i+7) + " " + inputArray.get(i+8);
 						faculty = inputArray.get(i+9);
 						addCourse();
 						i += 10;
