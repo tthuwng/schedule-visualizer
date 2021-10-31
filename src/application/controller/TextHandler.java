@@ -29,6 +29,7 @@ public class TextHandler {
 		int i = 0;
 		int max = inputArray.size();
 		while (i < max) {
+			// initialize the variable after each course
 			String courseCode = "";
 			String title = "";
 			String[] weekdaysList;
@@ -36,34 +37,62 @@ public class TextHandler {
 			String faculty = "";
 			String startTime = "";
 			String endTime = "";
+			
 			String data = inputArray.get(i);
 			if (data.contains("-") && !(data.contains("AM") || data.contains("PM"))) {
-				courseCode = data;
-				title = inputArray.get(i+1);
-				weekdaysList = inputArray.get(i+5).split("\\s");
-				String[] times = inputArray.get(i+6).split(" - ");
-				startTime = times[0];
-				endTime = times[1];
-				if (inputArray.get(i+8).contains("AM") || inputArray.get(i+8).contains("PM")) {
-					String[] secondWeekdaysList = inputArray.get(i+7).split("\\s");
-					String[] secondTimes = inputArray.get(i+8).split(" - ");
-					String secondStartTime = secondTimes[0];
-					String secondEndTime = secondTimes[1];
-					location = inputArray.get(i+9) + inputArray.get(i+10);
-					faculty = inputArray.get(i+11);
+				// some mandatory data 
+				courseCode = data; // course code
+				title = inputArray.get(i+1); // course name
+				weekdaysList = inputArray.get(i+5).split("\\s"); // the weekdays
+				System.out.println(inputArray.get(i+7) + "||" + inputArray.get(i+7).contains(","));
+				System.out.println(courseCode +
+						title +
+						location + 
+						faculty
+						);
+				if (inputArray.get(i+7).contains(",")) {
+					location = inputArray.get(i+5) + inputArray.get(i+6);
+					faculty = inputArray.get(i+7);
+					System.out.println(faculty + location);
+					i += 8;
+					System.out.println(inputArray.get(i));
 					Course createACourse = new Course(courseCode, title, startTime, endTime, weekdaysList, location, faculty);
 					courseArray.add(createACourse);
-					courseArray.add(createACourse.addNewTimeFrame(secondStartTime, secondEndTime, secondWeekdaysList));
-					i += 12;
-					
 				} else {
-					location = inputArray.get(i+7) + inputArray.get(i+8);
-					faculty = inputArray.get(i+9);
-					Course createACourse = new Course(courseCode, title, startTime, endTime, weekdaysList, location, faculty);
-					courseArray.add(createACourse);
-					i += 10;
+					String[] times = inputArray.get(i+6).split(" - "); // start and end time
+					startTime = times[0];
+					endTime = times[1];
+					System.out.println(startTime +endTime);
+					// check if the course has second time frame (due to the case of Viet Physics Class)
+					if ((i+11 < max) && inputArray.get(i+11).contains(",")) {
+						String[] secondWeekdaysList = inputArray.get(i+7).split("\\s");
+						String[] secondTimes = inputArray.get(i+8).split(" - ");
+						String secondStartTime = secondTimes[0];
+						String secondEndTime = secondTimes[1];
+						location = inputArray.get(i+9) + inputArray.get(i+10);
+						faculty = inputArray.get(i+11);
+						Course createACourse = new Course(courseCode, title, startTime, endTime, weekdaysList, location, faculty);
+						courseArray.add(createACourse);
+						courseArray.add(createACourse.addNewTimeFrame(secondStartTime, secondEndTime, secondWeekdaysList));
+						i += 12;
+						
+					} else {
+						// for normal course
+						location = inputArray.get(i+7) + inputArray.get(i+8);
+						faculty = inputArray.get(i+9);
+						System.out.println(location +faculty);
+						Course createACourse = new Course(courseCode, title, startTime, endTime, weekdaysList, location, faculty);
+						courseArray.add(createACourse);
+						i += 10;
+					}
 				}
+				
 			}
+			System.out.println(courseCode +
+					title +
+					location + 
+					faculty
+					);
 		}
 	}
 	
