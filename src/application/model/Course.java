@@ -54,8 +54,17 @@ public class Course {
 	
 	@Override
 	public String toString() {
+		String output = location + "\n";
+		output += faculty + "\n";
+		output += courseCode + "\n";
+		output += title + "\n";
+		for (int i = 0; i < weekdaysList.length; i++) {
+			output += weekdaysList[i] + " ";
+		}
+		output += "\n" + startTime + " - " + endTime;
+		
 		// this is for testing the weekdays case
-		return courseCode + "||" + title + "||" + startTime + "||" + endTime + "||" + location + "||" + faculty; 
+		return output; 
 	}
 
 }
