@@ -284,7 +284,7 @@ public class MainView extends Application {
 		
 		tab2.setContent(primaryGrid);
 		tabPane.getTabs().add(tab2);
-		
+		System.out.print("This is a message");
 		addCourseButton.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override
