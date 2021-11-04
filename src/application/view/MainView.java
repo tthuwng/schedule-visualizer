@@ -140,7 +140,7 @@ public class MainView extends Application {
 					System.out.println(i.toString() + "\n");
 				}
 			} else {
-				System.out.println("HELL THIS IS A MESSAGE");
+				System.out.println("Cannot recognize course.");
 			}
 		} else {
 			System.out.println("You entered nothing :<");
