@@ -35,10 +35,9 @@ import javafx.scene.text.Text;
 
 public class MainView extends Application {
 	private Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-	private final double COMPUTER_WIDTH = screenSize.getWidth()-100;
-	private final double COMPUTER_HEIGHT = screenSize.getHeight()-100;
-	private final Image APP_ICON = new Image(getClass().getResourceAsStream("images/logo.png"));
-	private final String pattern = "mm/dd/yyyy";
+	protected final double COMPUTER_WIDTH = screenSize.getWidth()-100;
+	protected final double COMPUTER_HEIGHT = screenSize.getHeight()-100;
+	protected final Image APP_ICON = new Image(getClass().getResourceAsStream("images/logo.png"));
 	
 	private final ObservableList<String> timeOptions = FXCollections.observableArrayList("AM", "PM");
 	/*private Stage stage;
@@ -130,12 +129,12 @@ public class MainView extends Application {
 	}
 	
 	private void parseTextSchedulize(TextArea textArea) {
-		Label message = new Label();
+		
 		if (!textArea.getText().equals("")) {
 			TextHandler parseText = new TextHandler(textArea.getText());
 			ArrayList<Course> courses = parseText.getCourseArray();
 			if (!courses.isEmpty()) {
-				triggerCalenderView();
+				CalendarView run = new CalendarView();
 				for (Course i : courses) {
 					System.out.println(i.toString() + "\n");
 				}
@@ -149,16 +148,7 @@ public class MainView extends Application {
 		
 		
 	}
-	private void triggerCalenderView() {
-		StackPane window = new StackPane();
-
-		Scene scene1 = new Scene(window, COMPUTER_WIDTH, COMPUTER_HEIGHT);
-		Stage newWindow = new Stage();
-		newWindow.getIcons().add(APP_ICON);
-		newWindow.setTitle("Calendar");
-		newWindow.setScene(scene1);
-		newWindow.show();
-	}
+	
 
 	/**
 	 * setTab2 allows user to manually plug in their schedules class by class
