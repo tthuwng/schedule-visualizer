@@ -56,40 +56,45 @@ public class TextHandler{
 				// some mandatory data 
 				courseCode = data; // course code
 				title = inputArray.get(i+1); // course name
-				weekdaysList = inputArray.get(i+5).split("\\s"); // the weekdays
-				
-				if (inputArray.get(i+7).contains(",")) {
-					location = inputArray.get(i+5) + " " + inputArray.get(i+6);
-					faculty = inputArray.get(i+7);
-					i += 8;
+				if (inputArray.get(i+5).contains(",")) {
+					faculty = inputArray.get(i+5);
 					addCourse();
-					
+					i += 6;
 				} else {
-					String[] times = inputArray.get(i+6).split(" - "); // start and end time
-					startTime = times[0];
-					endTime = times[1];
-					// check if the course has second time frame (due to the case of Viet Physics Class)
-					if ((i+11 < max) && inputArray.get(i+11).contains(",")) {
-						String[] secondWeekdaysList = inputArray.get(i+7).split("\\s");
-						String[] secondTimes = inputArray.get(i+8).split(" - ");
-						String secondStartTime = secondTimes[0];
-						String secondEndTime = secondTimes[1];
-						location = inputArray.get(i+9) + " " + inputArray.get(i+10);
-						faculty = inputArray.get(i+11);
-						Course createACourse = new Course(courseCode, title, startTime, endTime, weekdaysList, location, faculty);
-						courseArray.add(createACourse);
-						courseArray.add(createACourse.addNewTimeFrame(secondStartTime, secondEndTime, secondWeekdaysList));
-						i += 12;
+					weekdaysList = inputArray.get(i+5).split("\\s"); // the weekdays
+					
+					if (inputArray.get(i+7).contains(",")) {
+						location = inputArray.get(i+5) + " " + inputArray.get(i+6);
+						faculty = inputArray.get(i+7);
+						i += 8;
+						addCourse();
 						
 					} else {
-						// for normal course
-						location = inputArray.get(i+7) + " " + inputArray.get(i+8);
-						faculty = inputArray.get(i+9);
-						addCourse();
-						i += 10;
+						String[] times = inputArray.get(i+6).split(" - "); // start and end time
+						startTime = times[0];
+						endTime = times[1];
+						// check if the course has second time frame (due to the case of Viet Physics Class)
+						if ((i+11 < max) && inputArray.get(i+11).contains(",")) {
+							String[] secondWeekdaysList = inputArray.get(i+7).split("\\s");
+							String[] secondTimes = inputArray.get(i+8).split(" - ");
+							String secondStartTime = secondTimes[0];
+							String secondEndTime = secondTimes[1];
+							location = inputArray.get(i+9) + " " + inputArray.get(i+10);
+							faculty = inputArray.get(i+11);
+							Course createACourse = new Course(courseCode, title, startTime, endTime, weekdaysList, location, faculty);
+							courseArray.add(createACourse);
+							courseArray.add(createACourse.addNewTimeFrame(secondStartTime, secondEndTime, secondWeekdaysList));
+							i += 12;
+							
+						} else {
+							// for normal course
+							location = inputArray.get(i+7) + " " + inputArray.get(i+8);
+							faculty = inputArray.get(i+9);
+							addCourse();
+							i += 10;
+						}
 					}
 				}
-				
 			} else {
 				i += 1;
 			}

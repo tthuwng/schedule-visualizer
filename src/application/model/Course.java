@@ -58,8 +58,10 @@ public class Course {
 		output += faculty + "\n";
 		output += courseCode + "\n";
 		output += title + "\n";
-		for (int i = 0; i < weekdaysList.length; i++) {
-			output += weekdaysList[i] + " ";
+		if (weekdaysList != null) {
+			for (int i = 0; i < weekdaysList.length; i++) {
+				output += weekdaysList[i] + " ";
+			}
 		}
 		if (!startTime.equals("") || !endTime.equals("")) {
 			output += "\n" + startTime + " - " + endTime;

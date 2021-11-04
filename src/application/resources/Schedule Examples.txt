@@ -1,0 +1,329 @@
+SCHEDULE 1
+
+CSC-305-01
+Software Development
+4.00000
+08/30/21
+12/10/21
+Tu Th 
+8:30AM - 10:10AM
+ 	 	
+OLIN
+209
+Khan Mohd, Tauheed
+MATH-410-01
+Real Analysis
+4.00000
+08/30/21
+12/10/21
+M W F 
+10:30AM - 11:45AM
+ 	 	
+OLIN
+202
+Clauss, Jon M
+MUEN-309-NC
+Symphonic Band
+0.00000
+08/30/21
+12/10/21
+M W F 
+4:30PM - 5:30PM
+Tu Th 
+4:15PM - 5:30PM
+BERG
+ER
+Lambrecht, James M
+MUEN-309-NC
+Symphonic Band
+0.00000
+08/30/21
+12/10/21
+M W F 
+4:30PM - 5:30PM
+Tu Th 
+4:15PM - 5:30PM
+BERG
+ER
+Lambrecht, James M
+MUEN-309-NC
+Symphonic Band
+0.00000
+08/30/21
+12/10/21
+M W F 
+4:30PM - 5:30PM
+Tu Th 
+4:15PM - 5:30PM
+BERG
+ER
+Lambrecht, James M
+MULS-300-PN-RE
+Piano
+2.00000
+08/30/21
+12/10/21
+ 	 	 	 	 	 	
+Elfline, Robert P
+MUSC-311-01
+Mus Styles & Lit I
+4.00000
+08/30/21
+12/10/21
+Tu Th 
+12:20PM - 2:00PM
+ 	 	
+BERG
+LARSON
+Ehrlich, Janina A
+MUSC-360-03
+Conducting I
+4.00000
+08/30/21
+12/10/21
+M W F 
+1:30PM - 2:45PM
+ 	 	
+BERG
+ER
+Lambrecht, James M
+
+
+SCHEDULE 2
+
+CSC-202-01
+Data Structures
+4.00000
+02/10/21
+05/21/21
+M W F 
+12:00PM - 1:15PM
+ 	 	
+OLIN
+208
+Mueller, Diane C
+CSC-202L-01
+Lab component of CSC-202
+0.00000
+02/10/21
+05/21/21
+Tu 
+12:15PM - 2:05PM
+ 	 	
+OLIN
+307
+Mueller, Diane C
+MATH-450-01
+Algebraic Structures
+4.00000
+02/10/21
+05/21/21
+M W F 
+1:30PM - 2:45PM
+ 	 	
+OLIN
+201
+Clauss, Jon M
+MUEN-209-NC
+Symphonic Band
+0.00000
+02/10/21
+05/21/21
+M W F 
+4:30PM - 5:30PM
+Tu Th 
+4:15PM - 5:30PM
+BERG
+ER
+Lambrecht, James M
+MUEN-209-NC
+Symphonic Band
+0.00000
+02/10/21
+05/21/21
+M W F 
+4:30PM - 5:30PM
+Tu Th 
+4:15PM - 5:30PM
+BERG
+ER
+Lambrecht, James M
+MUEN-209-NC
+Symphonic Band
+0.00000
+02/10/21
+05/21/21
+M W F 
+4:30PM - 5:30PM
+Tu Th 
+4:15PM - 5:30PM
+BERG
+ER
+Lambrecht, James M
+MULS-200-PN-RE
+Piano
+2.00000
+02/10/21
+05/21/21
+ 	 	 	 	 	 	
+Elfline, Robert P
+MUSC-003-01
+Improvisation
+0.00000
+02/10/21
+05/21/21
+ 	 	 	 	 	 	
+Granet, Susan L
+MUSC-212-02
+Musicianship IV
+4.00000
+02/10/21
+05/21/21
+M W F 
+9:00AM - 10:15AM
+ 	 	
+BERG
+LARSON
+Elfline, Robert P
+MUSC-212L-01
+Muscianship IV Lab
+0.00000
+02/10/21
+05/21/21
+Tu Th 
+8:20AM - 9:10AM
+ 	 	
+BERG
+LARSON
+Ellis, Margaret J
+
+
+SCHEDULE 3
+
+SPST-251-01
+Latino/A Culture in Us
+4.00000
+01/11/21
+02/02/21
+M Tu W Th F 
+12:30PM - 4:00PM
+ 	 	
+DENK
+301
+Rockwell, Megan E
+
+
+SCHEDULE 4
+
+ISS-HLDN-02
+Holden Village
+0.00000
+01/03/22
+01/25/22
+ 	 	 	 	 	 	
+Bidegaray, Pedro 
+RELG-208-HLDN
+Lit & Theology
+4.00000
+01/03/22
+01/25/22
+ 	 	 	 	 	 	
+Olsen, Paul V
+
+
+SCHEDULE 5
+
+CSC-201-02
+Intro to Computer Science
+4.00000
+08/31/20
+12/11/20
+M W F 
+10:30AM - 11:45AM
+ 	 	
+OLIN
+307
+Khan Mohd, Tauheed 
+MATH-350-02
+Linear Algebra
+4.00000
+08/31/20
+12/11/20
+M W F 
+1:30PM - 2:45PM
+ 	 	
+OLIN
+209
+Rodman, Stacey 
+MUEN-209-NC
+Symphonic Band
+0.00000
+08/31/20
+12/11/20
+M W F 
+4:30PM - 5:30PM
+Tu Th 
+4:15PM - 5:30PM
+BERG
+ER
+Lambrecht, James M
+MUEN-209-NC
+Symphonic Band
+0.00000
+08/31/20
+12/11/20
+M W F 
+4:30PM - 5:30PM
+Tu Th 
+4:15PM - 5:30PM
+BERG
+ER
+Lambrecht, James M
+MUEN-209-NC
+Symphonic Band
+0.00000
+08/31/20
+12/11/20
+M W F 
+4:30PM - 5:30PM
+Tu Th 
+4:15PM - 5:30PM
+BERG
+ER
+Lambrecht, James M
+MULS-200-PN-RE
+Piano
+2.00000
+08/31/20
+12/11/20
+ 	 	 	 	 	 	
+Elfline, Robert P
+MUSC-211-01
+Musicianship III
+4.00000
+08/31/20
+12/11/20
+M W F 
+9:00AM - 10:15AM
+ 	 	
+BERG
+BLACKBOX
+Cummins, John J
+MUSC-211L-01
+Muscianship III Lab
+0.00000
+08/31/20
+12/11/20
+Tu Th 
+8:20AM - 9:10AM
+ 	 	
+BERG
+POTTERH
+Ellis, Margaret J
+MUSC-321-01
+Piano Literature
+2.00000
+08/31/20
+12/11/20
+ 	 	 	 	 	 	
+Elfline, Robert
