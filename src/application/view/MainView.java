@@ -134,18 +134,25 @@ public class MainView extends Application {
 		if (!textArea.getText().equals("")) {
 			TextHandler parseText = new TextHandler(textArea.getText());
 			ArrayList<Course> courses = parseText.getCourseArray();
-			for (Course i : courses) {
-				System.out.println(i.toString());
+			if (!courses.isEmpty()) {
+				triggerCalenderView();
+				for (Course i : courses) {
+					System.out.println(i.toString() + "\n");
+				}
+			} else {
+				System.out.println("HELL THIS IS A MESSAGE");
 			}
 		} else {
-			message.setText("You entered nothing :<");
-			System.out.println("HELL THIS IS A MESSAGE");
+			System.out.println("You entered nothing :<");
+			
 		}
 		
+		
+	}
+	private void triggerCalenderView() {
 		StackPane window = new StackPane();
 
 		Scene scene1 = new Scene(window, COMPUTER_WIDTH, COMPUTER_HEIGHT);
-		window.getChildren().add(message);
 		Stage newWindow = new Stage();
 		newWindow.getIcons().add(APP_ICON);
 		newWindow.setTitle("Calendar");

@@ -61,8 +61,9 @@ public class Course {
 		for (int i = 0; i < weekdaysList.length; i++) {
 			output += weekdaysList[i] + " ";
 		}
-		output += "\n" + startTime + " - " + endTime;
-		
+		if (!startTime.equals("") || !endTime.equals("")) {
+			output += "\n" + startTime + " - " + endTime;
+		}
 		// this is for testing the weekdays case
 		return output; 
 	}
