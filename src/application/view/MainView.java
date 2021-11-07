@@ -142,7 +142,7 @@ public class MainView extends Application {
 				System.out.println("Cannot recognize course.");
 			}
 		} else {
-			System.out.println("You entered nothing :<");
+			System.out.println("You entered nothing :< hung owes me $10 for portillos");
 			
 		}
 		
@@ -279,34 +279,44 @@ public class MainView extends Application {
 
 			@Override
 			public void handle(ActionEvent event) {
-				
+				ArrayList<String> classDaysArray = new ArrayList<String>();
 				String classDays = "";
 				if (sun.isSelected() == true){
-					classDays+= "S ";
+					classDays+= "S ";	
+					classDaysArray.add("S ");
 				}
 				if (mon.isSelected() == true){
 					classDays+= "M ";
+					classDaysArray.add("M ");
 				}
 				if (tue.isSelected() == true){
 					classDays+= "Tu ";
+					classDaysArray.add("Tu ");
 				}
 				if (wed.isSelected() == true){
 					classDays+= "W ";
+					classDaysArray.add("W ");
 				}
 				if (thu.isSelected() == true){
 					classDays+= "Th ";
+					classDaysArray.add("Th ");
 				}
 				if (fri.isSelected() == true){
 					classDays+= "F ";
+					classDaysArray.add("F ");
 				}
 				if (sat.isSelected() == true){
 					classDays+= "Sat ";
+					classDaysArray.add("Sat ");
 				}
-			
+				
+				int lengthAList = classDaysArray.size();
+				String[] classDaysList = new String[lengthAList];
 				String timeOp1 = startTime.getText() + timeOption1.getValue().toString();
 				String timeOp2 = endTime.getText() +  timeOption2.getValue().toString();
-				
-				String[] customSchedule = new String[11];
+				Course courseCustom = new Course(courseCode.getText(), courseTitle.getText(), timeOp1, timeOp2, 
+						classDaysList, location.getText(),  facultyName.getText());
+/*				String[] customSchedule = new String[11];
 				customSchedule[0] = courseCode.getText();
 				customSchedule[1] = courseTitle.getText();
 				customSchedule[5] = classDays;
@@ -315,14 +325,14 @@ public class MainView extends Application {
 				customSchedule[8] = location.getText();
 				customSchedule[9] = roomNumber.getText();
 				customSchedule[10] = facultyName.getText();
-				
+			*/	
 				// this for Course Class testing
 				//Course newCourse = new Course(customSchedule[0], customSchedule[1], customSchedule[3], customSchedule[4], customSchedule[6], customSchedule[7], classDays);
 				//System.out.println(newCourse.toString());
 				//Debugging and making sure I actually get what I was fucking looking for comment this out or remove it if you dont need it anymore (look in console window)
-				for (int i = 0; i < 11; i++) {
-					System.out.println(customSchedule[i]);
-				}
+	//			for (int i = 0; i < 11; i++) {
+	//				System.out.println(customSchedule[i]);
+	//			}
 				
 				//Resetting the textfields to beblank
 				courseCode.clear();
