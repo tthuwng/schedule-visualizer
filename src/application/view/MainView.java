@@ -309,13 +309,23 @@ public class MainView extends Application {
 					classDays+= "Sat ";
 					classDaysArray.add("Sat ");
 				}
-				String fullLocation = location.getText() + roomNumber.getText();
+				
 				int lengthAList = classDaysArray.size();
 				String[] classDaysList = new String[lengthAList];
+				String fullLocation = location.getText() + roomNumber.getText();
+				
+				for (int i = 0; i < lengthAList; i++) {
+					classDaysList[i] = classDaysArray.get(i);
+				}
+				
+				
 				String timeOp1 = startTime.getText() + timeOption1.getValue().toString();
 				String timeOp2 = endTime.getText() +  timeOption2.getValue().toString();
+				
 				Course courseCustom = new Course(courseCode.getText(), courseTitle.getText(), timeOp1, timeOp2, 
 						classDaysList, fullLocation,  facultyName.getText());
+				
+				
 /*				String[] customSchedule = new String[11];
 				customSchedule[0] = courseCode.getText();
 				customSchedule[1] = courseTitle.getText();
@@ -338,6 +348,10 @@ public class MainView extends Application {
 				courseCode.clear();
 				courseTitle.clear();
 				classDays = null;
+				classDaysArray = null;
+				fullLocation = null;
+				classDaysList = null;
+				
 				
 				sun.setSelected(false);
 				mon.setSelected(false);
