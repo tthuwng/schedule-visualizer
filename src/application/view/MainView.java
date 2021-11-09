@@ -315,7 +315,7 @@ public class MainView extends Application {
 					
 					int lengthAList = classDaysArray.size();
 					String[] classDaysList = new String[lengthAList];
-					String fullLocation = location.getText() + roomNumber.getText();
+					String fullLocation = location.getText() + " " +roomNumber.getText();
 					
 					for (int i = 0; i < lengthAList; i++) {
 						classDaysList[i] = classDaysArray.get(i);
