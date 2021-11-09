@@ -275,101 +275,108 @@ public class MainView extends Application {
 		tab2.setContent(primaryGrid);
 		tabPane.getTabs().add(tab2);
 		System.out.print("This is a message");
+		
+		ArrayList<Course> courses = new ArrayList<Course>();
 		addCourseButton.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override
 			public void handle(ActionEvent event) {
-				ArrayList<String> classDaysArray = new ArrayList<String>();
-				String classDays = "";
-				if (sun.isSelected() == true){
-					classDays+= "S ";	
-					classDaysArray.add("S ");
+				if (!startTime.getText().equals("") && !endTime.getText().equals("")) {
+					ArrayList<String> classDaysArray = new ArrayList<String>();
+					String classDays = "";
+					if (sun.isSelected() == true){
+						classDays+= "S ";	
+						classDaysArray.add("S ");
+					}
+					if (mon.isSelected() == true){
+						classDays+= "M ";
+						classDaysArray.add("M ");
+					}
+					if (tue.isSelected() == true){
+						classDays+= "Tu ";
+						classDaysArray.add("Tu ");
+					}
+					if (wed.isSelected() == true){
+						classDays+= "W ";
+						classDaysArray.add("W ");
+					}
+					if (thu.isSelected() == true){
+						classDays+= "Th ";
+						classDaysArray.add("Th ");
+					}
+					if (fri.isSelected() == true){
+						classDays+= "F ";
+						classDaysArray.add("F ");
+					}
+					if (sat.isSelected() == true){
+						classDays+= "Sat ";
+						classDaysArray.add("Sat ");
+					}
+					
+					int lengthAList = classDaysArray.size();
+					String[] classDaysList = new String[lengthAList];
+					String fullLocation = location.getText() + roomNumber.getText();
+					
+					for (int i = 0; i < lengthAList; i++) {
+						classDaysList[i] = classDaysArray.get(i);
+					}
+					
+					
+					String timeOp1 = startTime.getText() + timeOption1.getValue().toString();
+					String timeOp2 = endTime.getText() +  timeOption2.getValue().toString();
+					
+					Course courseCustom = new Course(courseCode.getText(), courseTitle.getText(), timeOp1, timeOp2, 
+							classDaysList, fullLocation,  facultyName.getText());
+					courses.add(courseCustom);
+					System.out.println(courseCustom.toString());
+					
+					
+	/*				String[] customSchedule = new String[11];
+					customSchedule[0] = courseCode.getText();
+					customSchedule[1] = courseTitle.getText();
+					customSchedule[5] = classDays;
+					customSchedule[6] = timeOp1; 
+					customSchedule[7] = timeOp2; 
+					customSchedule[8] = location.getText();
+					customSchedule[9] = roomNumber.getText();
+					customSchedule[10] = facultyName.getText();
+				*/	
+					// this for Course Class testing
+					//Course newCourse = new Course(customSchedule[0], customSchedule[1], customSchedule[3], customSchedule[4], customSchedule[6], customSchedule[7], classDays);
+					//System.out.println(newCourse.toString());
+					//Debugging and making sure I actually get what I was fucking looking for comment this out or remove it if you dont need it anymore (look in console window)
+		//			for (int i = 0; i < 11; i++) {
+		//				System.out.println(customSchedule[i]);
+		//			}
+					
+					//Resetting the textfields to beblank
+					courseCode.clear();
+					courseTitle.clear();
+					classDays = null;
+					classDaysArray = null;
+					fullLocation = null;
+					classDaysList = null;
+					
+					
+					sun.setSelected(false);
+					mon.setSelected(false);
+					tue.setSelected(false);
+					wed.setSelected(false);
+					thu.setSelected(false);
+					fri.setSelected(false);
+					sat.setSelected(false);
+					
+					timeOption1.setValue(null);
+					timeOption2.setValue(null);
+					startTime.clear(); 
+					endTime.clear();
+					location.clear();
+					roomNumber.clear();
+					facultyName.clear();
+					
 				}
-				if (mon.isSelected() == true){
-					classDays+= "M ";
-					classDaysArray.add("M ");
-				}
-				if (tue.isSelected() == true){
-					classDays+= "Tu ";
-					classDaysArray.add("Tu ");
-				}
-				if (wed.isSelected() == true){
-					classDays+= "W ";
-					classDaysArray.add("W ");
-				}
-				if (thu.isSelected() == true){
-					classDays+= "Th ";
-					classDaysArray.add("Th ");
-				}
-				if (fri.isSelected() == true){
-					classDays+= "F ";
-					classDaysArray.add("F ");
-				}
-				if (sat.isSelected() == true){
-					classDays+= "Sat ";
-					classDaysArray.add("Sat ");
-				}
-				
-				int lengthAList = classDaysArray.size();
-				String[] classDaysList = new String[lengthAList];
-				String fullLocation = location.getText() + roomNumber.getText();
-				
-				for (int i = 0; i < lengthAList; i++) {
-					classDaysList[i] = classDaysArray.get(i);
-				}
-				
-				
-				String timeOp1 = startTime.getText() + timeOption1.getValue().toString();
-				String timeOp2 = endTime.getText() +  timeOption2.getValue().toString();
-				
-				Course courseCustom = new Course(courseCode.getText(), courseTitle.getText(), timeOp1, timeOp2, 
-						classDaysList, fullLocation,  facultyName.getText());
-				
-				
-/*				String[] customSchedule = new String[11];
-				customSchedule[0] = courseCode.getText();
-				customSchedule[1] = courseTitle.getText();
-				customSchedule[5] = classDays;
-				customSchedule[6] = timeOp1; 
-				customSchedule[7] = timeOp2; 
-				customSchedule[8] = location.getText();
-				customSchedule[9] = roomNumber.getText();
-				customSchedule[10] = facultyName.getText();
-			*/	
-				// this for Course Class testing
-				//Course newCourse = new Course(customSchedule[0], customSchedule[1], customSchedule[3], customSchedule[4], customSchedule[6], customSchedule[7], classDays);
-				//System.out.println(newCourse.toString());
-				//Debugging and making sure I actually get what I was fucking looking for comment this out or remove it if you dont need it anymore (look in console window)
-	//			for (int i = 0; i < 11; i++) {
-	//				System.out.println(customSchedule[i]);
-	//			}
-				
-				//Resetting the textfields to beblank
-				courseCode.clear();
-				courseTitle.clear();
-				classDays = null;
-				classDaysArray = null;
-				fullLocation = null;
-				classDaysList = null;
-				
-				
-				sun.setSelected(false);
-				mon.setSelected(false);
-				tue.setSelected(false);
-				wed.setSelected(false);
-				thu.setSelected(false);
-				fri.setSelected(false);
-				sat.setSelected(false);
-				
-				timeOption1.setValue(null);
-				timeOption2.setValue(null);
-				startTime.clear(); 
-				endTime.clear();
-				location.clear();
-				roomNumber.clear();
-				facultyName.clear();
-				
 			}
+				
 });
 	}
 		
