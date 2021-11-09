@@ -18,6 +18,7 @@ public class TextHandler{
 	private String endTime = "";
 	
 	public TextHandler(String textArea) {
+		//splits each String value for each new line
 		String[] inputText = textArea.split("\n");
 		for (int i = 0; i < inputText.length; i++) {
 			if (!inputText[i].isBlank()) {
