@@ -376,7 +376,7 @@ public class MainView extends Application {
 					
 				}
 			}
-				
+				/*ok bitch*/
 });
 	}
 		
