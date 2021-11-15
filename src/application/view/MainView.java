@@ -134,7 +134,7 @@ public class MainView extends Application {
 			TextHandler parseText = new TextHandler(textArea.getText());
 			ArrayList<Course> courses = parseText.getCourseArray();
 			if (!courses.isEmpty()) {
-				CalendarView run = new CalendarView();
+				CalendarMainView.triggerCalenderView();
 				for (Course i : courses) {
 					System.out.println(i.toString() + "\n");
 				}
@@ -142,7 +142,7 @@ public class MainView extends Application {
 				System.out.println("Cannot recognize course.");
 			}
 		} else {
-			System.out.println("You entered nothing :< hung owes me $10 for portillos");
+			System.out.println("You entered nothing");
 			
 		}
 		
@@ -274,7 +274,7 @@ public class MainView extends Application {
 		
 		tab2.setContent(primaryGrid);
 		tabPane.getTabs().add(tab2);
-		System.out.print("This is a message");
+		System.out.print("This is a message\n");
 		
 		ArrayList<Course> courses = new ArrayList<Course>();
 		addCourseButton.setOnAction(new EventHandler<ActionEvent>() {
