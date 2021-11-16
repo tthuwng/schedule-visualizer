@@ -8,13 +8,16 @@ import javafx.stage.Stage;
 import com.calendarfx.model.Calendar;
 import com.calendarfx.model.Calendar.Style;
 import com.calendarfx.model.CalendarSource;
-import com.calendarfx.view.CalendarView;
+import com.calendarfx.model.Entry;
+import com.calendarfx.view.*;
 
 import java.awt.Dimension;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.*;
 
 import javafx.application.Platform;
+import application.model.Course;
 
 public class CalendarMainView extends MainView {
 //	public CalendarMainView() {
@@ -24,11 +27,22 @@ public class CalendarMainView extends MainView {
 	protected final static double COMPUTER_WIDTH = screenSize.getWidth()-100;
 	protected final static double COMPUTER_HEIGHT = screenSize.getHeight()-100;
 
-	public static void triggerCalenderView() {
+	public static void triggerCalenderView(ArrayList<Course> courses) {
 
 		CalendarView calendarView = new CalendarView();
 		Calendar main = new Calendar("Main");
 		main.setStyle(Style.STYLE1);
+		
+		
+		for (Course course: courses) {
+			Entry<String> classEvent = new Entry<>(course.getTitle());
+			String startDate = course.getStartTime();
+			String endDate = course.getEndTime();
+			LocalDate date = course.getWeekdaysList();
+			classEvent.set
+		}
+
+
 
 		CalendarSource myCalendarSource = new CalendarSource("My Calendars");
 		myCalendarSource.getCalendars().addAll(main);
