@@ -325,10 +325,10 @@ public class MainView extends Application {
 					String timeOp1 = startTime.getText() + timeOption1.getValue().toString();
 					String timeOp2 = endTime.getText() +  timeOption2.getValue().toString();
 					
-					Course courseCustom = new Course(courseCode.getText(), courseTitle.getText(), timeOp1, timeOp2, 
-							classDaysList, fullLocation,  facultyName.getText());
-					courses.add(courseCustom);
-					System.out.println(courseCustom.toString());
+//					Course courseCustom = new Course(courseCode.getText(), courseTitle.getText(), timeOp1, timeOp2, 
+//							classDaysList, fullLocation,  facultyName.getText());
+//					courses.add(courseCustom);
+//					System.out.println(courseCustom.toString());
 					
 					
 	/*				String[] customSchedule = new String[11];

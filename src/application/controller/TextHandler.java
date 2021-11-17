@@ -11,11 +11,15 @@ public class TextHandler{
 	// data
 	private String courseCode = "";
 	private String title = "";
+	private String credit = "";
+	private String startDate = "";
+	private String endDate = "";
 	private String[] weekdaysList;
 	private String location = "";
 	private String faculty = "";
 	private String startTime = "";
 	private String endTime = "";
+	
 	
 	public TextHandler(String textArea) {
 		//splits each String value for each new line
@@ -33,7 +37,7 @@ public class TextHandler{
 		return courseArray;
 	}
 	private void addCourse() {
-		courseArray.add(new Course(courseCode, title, startTime, endTime, weekdaysList, location, faculty));
+		courseArray.add(new Course(courseCode, title, credit, startDate, endDate, startTime, endTime, weekdaysList, location, faculty));
 	}
 	
 	private void resetData() {
@@ -57,6 +61,10 @@ public class TextHandler{
 				// some mandatory data 
 				courseCode = data; // course code
 				title = inputArray.get(i+1); // course name
+				credit = inputArray.get(i+2);
+				startDate = inputArray.get(i+3);
+				endDate = inputArray.get(i+4);
+				System.out.println(inputArray);
 				if (inputArray.get(i+5).contains(",")) {
 					faculty = inputArray.get(i+5);
 					addCourse();
@@ -82,7 +90,7 @@ public class TextHandler{
 							String secondEndTime = secondTimes[1];
 							location = inputArray.get(i+9) + " " + inputArray.get(i+10);
 							faculty = inputArray.get(i+11);
-							Course createACourse = new Course(courseCode, title, startTime, endTime, weekdaysList, location, faculty);
+							Course createACourse = new Course(courseCode, title, credit, startDate, endDate, startTime, endTime, weekdaysList, location, faculty);
 							courseArray.add(createACourse);
 							courseArray.add(createACourse.addNewTimeFrame(secondStartTime, secondEndTime, secondWeekdaysList));
 							i += 12;
@@ -97,7 +105,7 @@ public class TextHandler{
 					}
 				}
 			} else {
-				i += 1;
+				i++;
 			}
 		}
 	}
