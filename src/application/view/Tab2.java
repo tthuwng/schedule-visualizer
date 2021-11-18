@@ -26,7 +26,7 @@ public class Tab2 extends MainView{
 	public Tab2(TabPane tabPane) {
 		setTab2(tabPane);
 	}
-	// Need to update Tab2 to get start date end end date
+	// Need to update Tab2 to get start date end end datesdf
 	/**
 	 * setTab2 allows user to manually plug in their schedules class by class
 	 * 
