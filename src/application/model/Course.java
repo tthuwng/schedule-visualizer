@@ -13,7 +13,7 @@ public class Course {
 	private String endTime;
 	
 	
-	public Course(String courseCode, String title, String credit,  String startDate, String endDate, String startTime, String endTime, String[] weekdaysList, String location, String faculty) {
+	public Course(String courseCode, String title, String credit, String startDate, String endDate, String startTime, String endTime, String[] weekdaysList, String location, String faculty) {
 		this.courseCode = courseCode;
 		this.title = title;
 		this.credit = credit;

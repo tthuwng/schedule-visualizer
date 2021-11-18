@@ -61,9 +61,11 @@ public class TextHandler{
 				// some mandatory data 
 				courseCode = data; // course code
 				title = inputArray.get(i+1); // course name
-				credit = inputArray.get(i+2);
-				startDate = inputArray.get(i+3);
-				endDate = inputArray.get(i+4);
+				
+				credit = inputArray.get(i+2); // credit 
+				startDate = inputArray.get(i+3); // start date
+				endDate = inputArray.get(i+4); // end date
+				
 				System.out.println(inputArray);
 				if (inputArray.get(i+5).contains(",")) {
 					faculty = inputArray.get(i+5);

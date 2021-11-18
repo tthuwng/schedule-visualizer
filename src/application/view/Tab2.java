@@ -201,7 +201,7 @@ public class Tab2 extends MainView{
 					String timeOp1 = startTime.getText() + timeOption1.getValue().toString();
 					String timeOp2 = endTime.getText() +  timeOption2.getValue().toString();
 					
-					Course courseCustom = new Course(courseCode.getText(), courseTitle.getText(), timeOp1, timeOp2, 
+					Course courseCustom = new Course(courseCode.getText(), courseTitle.getText(), "", "", "", timeOp1, timeOp2,  // need to change empty string
 							classDaysList, fullLocation,  facultyName.getText());
 					courses.add(courseCustom);
 					System.out.println(courseCustom.toString());
