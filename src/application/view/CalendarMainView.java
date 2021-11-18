@@ -74,9 +74,10 @@ public class CalendarMainView extends MainView {
         
 		
 
-		
+		// Main engine calendarfx
 		for (Course course: courses) {
 			Entry<String> classEvent = new Entry<>(course.getTitle());
+			
 			LocalDate startDate = LocalDate.parse(course.getStartDate(), DateTimeFormatter.ofPattern("MM/dd/uu"));
 			String endDate = LocalDate.parse(course.getEndDate(), DateTimeFormatter.ofPattern("MM/dd/uu")).format(DateTimeFormatter.BASIC_ISO_DATE);
 			LocalTime start = LocalTime.parse(course.getStartTime(), DateTimeFormatter.ofPattern("h:mma"));
