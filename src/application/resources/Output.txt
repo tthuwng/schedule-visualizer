@@ -1,0 +1,264 @@
+This is a messageOLIN 209
+Khan Mohd, Tauheed
+CSC-305-01
+Software Development
+Tu Th 
+8:30AM - 10:10AM
+
+OLIN 202
+Clauss, Jon M
+MATH-410-01
+Real Analysis
+M W F 
+10:30AM - 11:45AM
+
+BERG ER
+Lambrecht, James M
+MUEN-309-NC
+Symphonic Band
+M W F 
+4:30PM - 5:30PM
+
+BERG ER
+Lambrecht, James M
+MUEN-309-NC
+Symphonic Band
+Tu Th 
+4:15PM - 5:30PM
+
+BERG ER
+Lambrecht, James M
+MUEN-309-NC
+Symphonic Band
+M W F 
+4:30PM - 5:30PM
+
+BERG ER
+Lambrecht, James M
+MUEN-309-NC
+Symphonic Band
+Tu Th 
+4:15PM - 5:30PM
+
+BERG ER
+Lambrecht, James M
+MUEN-309-NC
+Symphonic Band
+M W F 
+4:30PM - 5:30PM
+
+BERG ER
+Lambrecht, James M
+MUEN-309-NC
+Symphonic Band
+Tu Th 
+4:15PM - 5:30PM
+
+
+Elfline, Robert P
+MULS-300-PN-RE
+Piano
+
+
+BERG LARSON
+Ehrlich, Janina A
+MUSC-311-01
+Mus Styles & Lit I
+Tu Th 
+12:20PM - 2:00PM
+
+BERG ER
+Lambrecht, James M
+MUSC-360-03
+Conducting I
+M W F 
+1:30PM - 2:45PM
+
+OLIN 208
+Mueller, Diane C
+CSC-202-01
+Data Structures
+M W F 
+12:00PM - 1:15PM
+
+OLIN 307
+Mueller, Diane C
+CSC-202L-01
+Lab component of CSC-202
+Tu 
+12:15PM - 2:05PM
+
+OLIN 201
+Clauss, Jon M
+MATH-450-01
+Algebraic Structures
+M W F 
+1:30PM - 2:45PM
+
+BERG ER
+Lambrecht, James M
+MUEN-209-NC
+Symphonic Band
+M W F 
+4:30PM - 5:30PM
+
+BERG ER
+Lambrecht, James M
+MUEN-209-NC
+Symphonic Band
+Tu Th 
+4:15PM - 5:30PM
+
+BERG ER
+Lambrecht, James M
+MUEN-209-NC
+Symphonic Band
+M W F 
+4:30PM - 5:30PM
+
+BERG ER
+Lambrecht, James M
+MUEN-209-NC
+Symphonic Band
+Tu Th 
+4:15PM - 5:30PM
+
+BERG ER
+Lambrecht, James M
+MUEN-209-NC
+Symphonic Band
+M W F 
+4:30PM - 5:30PM
+
+BERG ER
+Lambrecht, James M
+MUEN-209-NC
+Symphonic Band
+Tu Th 
+4:15PM - 5:30PM
+
+
+Elfline, Robert P
+MULS-200-PN-RE
+Piano
+
+
+
+Granet, Susan L
+MUSC-003-01
+Improvisation
+
+
+BERG LARSON
+Elfline, Robert P
+MUSC-212-02
+Musicianship IV
+M W F 
+9:00AM - 10:15AM
+
+BERG LARSON
+Ellis, Margaret J
+MUSC-212L-01
+Muscianship IV Lab
+Tu Th 
+8:20AM - 9:10AM
+
+DENK 301
+Rockwell, Megan E
+SPST-251-01
+Latino/A Culture in Us
+M Tu W Th F 
+12:30PM - 4:00PM
+
+
+Bidegaray, Pedro 
+ISS-HLDN-02
+Holden Village
+
+
+
+Olsen, Paul V
+RELG-208-HLDN
+Lit & Theology
+
+
+OLIN 307
+Khan Mohd, Tauheed 
+CSC-201-02
+Intro to Computer Science
+M W F 
+10:30AM - 11:45AM
+
+OLIN 209
+Rodman, Stacey 
+MATH-350-02
+Linear Algebra
+M W F 
+1:30PM - 2:45PM
+
+BERG ER
+Lambrecht, James M
+MUEN-209-NC
+Symphonic Band
+M W F 
+4:30PM - 5:30PM
+
+BERG ER
+Lambrecht, James M
+MUEN-209-NC
+Symphonic Band
+Tu Th 
+4:15PM - 5:30PM
+
+BERG ER
+Lambrecht, James M
+MUEN-209-NC
+Symphonic Band
+M W F 
+4:30PM - 5:30PM
+
+BERG ER
+Lambrecht, James M
+MUEN-209-NC
+Symphonic Band
+Tu Th 
+4:15PM - 5:30PM
+
+BERG ER
+Lambrecht, James M
+MUEN-209-NC
+Symphonic Band
+M W F 
+4:30PM - 5:30PM
+
+BERG ER
+Lambrecht, James M
+MUEN-209-NC
+Symphonic Band
+Tu Th 
+4:15PM - 5:30PM
+
+
+Elfline, Robert P
+MULS-200-PN-RE
+Piano
+
+
+BERG BLACKBOX
+Cummins, John J
+MUSC-211-01
+Musicianship III
+M W F 
+9:00AM - 10:15AM
+
+BERG POTTERH
+Ellis, Margaret J
+MUSC-211L-01
+Muscianship III Lab
+Tu Th 
+8:20AM - 9:10AM
+
+
+Elfline, Robert
+MUSC-321-01
+Piano Literature
