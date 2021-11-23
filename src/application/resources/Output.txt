@@ -1,228 +1,264 @@
-[OLIN 209
+This is a messageOLIN 209
 Khan Mohd, Tauheed
 CSC-305-01
 Software Development
 Tu Th 
 8:30AM - 10:10AM
-08/30/21 - 12/10/21, OLIN 202
+
+OLIN 202
 Clauss, Jon M
 MATH-410-01
 Real Analysis
 M W F 
 10:30AM - 11:45AM
-08/30/21 - 12/10/21, BERG ER
+
+BERG ER
 Lambrecht, James M
 MUEN-309-NC
 Symphonic Band
 M W F 
 4:30PM - 5:30PM
-08/30/21 - 12/10/21, BERG ER
+
+BERG ER
 Lambrecht, James M
 MUEN-309-NC
 Symphonic Band
 Tu Th 
 4:15PM - 5:30PM
-08/30/21 - 12/10/21, BERG ER
+
+BERG ER
 Lambrecht, James M
 MUEN-309-NC
 Symphonic Band
 M W F 
 4:30PM - 5:30PM
-08/30/21 - 12/10/21, BERG ER
+
+BERG ER
 Lambrecht, James M
 MUEN-309-NC
 Symphonic Band
 Tu Th 
 4:15PM - 5:30PM
-08/30/21 - 12/10/21, BERG ER
+
+BERG ER
 Lambrecht, James M
 MUEN-309-NC
 Symphonic Band
 M W F 
 4:30PM - 5:30PM
-08/30/21 - 12/10/21, BERG ER
+
+BERG ER
 Lambrecht, James M
 MUEN-309-NC
 Symphonic Band
 Tu Th 
 4:15PM - 5:30PM
-08/30/21 - 12/10/21, 
+
+
 Elfline, Robert P
 MULS-300-PN-RE
 Piano
 
-08/30/21 - 12/10/21, BERG LARSON
+
+BERG LARSON
 Ehrlich, Janina A
 MUSC-311-01
 Mus Styles & Lit I
 Tu Th 
 12:20PM - 2:00PM
-08/30/21 - 12/10/21, BERG ER
+
+BERG ER
 Lambrecht, James M
 MUSC-360-03
 Conducting I
 M W F 
 1:30PM - 2:45PM
-08/30/21 - 12/10/21, OLIN 208
+
+OLIN 208
 Mueller, Diane C
 CSC-202-01
 Data Structures
 M W F 
 12:00PM - 1:15PM
-02/10/21 - 05/21/21, OLIN 307
+
+OLIN 307
 Mueller, Diane C
 CSC-202L-01
 Lab component of CSC-202
 Tu 
 12:15PM - 2:05PM
-02/10/21 - 05/21/21, OLIN 201
+
+OLIN 201
 Clauss, Jon M
 MATH-450-01
 Algebraic Structures
 M W F 
 1:30PM - 2:45PM
-02/10/21 - 05/21/21, BERG ER
+
+BERG ER
 Lambrecht, James M
 MUEN-209-NC
 Symphonic Band
 M W F 
 4:30PM - 5:30PM
-02/10/21 - 05/21/21, BERG ER
+
+BERG ER
 Lambrecht, James M
 MUEN-209-NC
 Symphonic Band
 Tu Th 
 4:15PM - 5:30PM
-02/10/21 - 05/21/21, BERG ER
+
+BERG ER
 Lambrecht, James M
 MUEN-209-NC
 Symphonic Band
 M W F 
 4:30PM - 5:30PM
-02/10/21 - 05/21/21, BERG ER
+
+BERG ER
 Lambrecht, James M
 MUEN-209-NC
 Symphonic Band
 Tu Th 
 4:15PM - 5:30PM
-02/10/21 - 05/21/21, BERG ER
+
+BERG ER
 Lambrecht, James M
 MUEN-209-NC
 Symphonic Band
 M W F 
 4:30PM - 5:30PM
-02/10/21 - 05/21/21, BERG ER
+
+BERG ER
 Lambrecht, James M
 MUEN-209-NC
 Symphonic Band
 Tu Th 
 4:15PM - 5:30PM
-02/10/21 - 05/21/21, 
+
+
 Elfline, Robert P
 MULS-200-PN-RE
 Piano
 
-02/10/21 - 05/21/21, 
+
+
 Granet, Susan L
 MUSC-003-01
 Improvisation
 
-02/10/21 - 05/21/21, BERG LARSON
+
+BERG LARSON
 Elfline, Robert P
 MUSC-212-02
 Musicianship IV
 M W F 
 9:00AM - 10:15AM
-02/10/21 - 05/21/21, BERG LARSON
+
+BERG LARSON
 Ellis, Margaret J
 MUSC-212L-01
 Muscianship IV Lab
 Tu Th 
 8:20AM - 9:10AM
-02/10/21 - 05/21/21, DENK 301
+
+DENK 301
 Rockwell, Megan E
 SPST-251-01
 Latino/A Culture in Us
 M Tu W Th F 
 12:30PM - 4:00PM
-01/11/21 - 02/02/21, 
+
+
 Bidegaray, Pedro 
 ISS-HLDN-02
 Holden Village
 
-01/03/22 - 01/25/22, 
+
+
 Olsen, Paul V
 RELG-208-HLDN
 Lit & Theology
 
-01/03/22 - 01/25/22, OLIN 307
+
+OLIN 307
 Khan Mohd, Tauheed 
 CSC-201-02
 Intro to Computer Science
 M W F 
 10:30AM - 11:45AM
-08/31/20 - 12/11/20, OLIN 209
+
+OLIN 209
 Rodman, Stacey 
 MATH-350-02
 Linear Algebra
 M W F 
 1:30PM - 2:45PM
-08/31/20 - 12/11/20, BERG ER
+
+BERG ER
 Lambrecht, James M
 MUEN-209-NC
 Symphonic Band
 M W F 
 4:30PM - 5:30PM
-08/31/20 - 12/11/20, BERG ER
+
+BERG ER
 Lambrecht, James M
 MUEN-209-NC
 Symphonic Band
 Tu Th 
 4:15PM - 5:30PM
-08/31/20 - 12/11/20, BERG ER
+
+BERG ER
 Lambrecht, James M
 MUEN-209-NC
 Symphonic Band
 M W F 
 4:30PM - 5:30PM
-08/31/20 - 12/11/20, BERG ER
+
+BERG ER
 Lambrecht, James M
 MUEN-209-NC
 Symphonic Band
 Tu Th 
 4:15PM - 5:30PM
-08/31/20 - 12/11/20, BERG ER
+
+BERG ER
 Lambrecht, James M
 MUEN-209-NC
 Symphonic Band
 M W F 
 4:30PM - 5:30PM
-08/31/20 - 12/11/20, BERG ER
+
+BERG ER
 Lambrecht, James M
 MUEN-209-NC
 Symphonic Band
 Tu Th 
 4:15PM - 5:30PM
-08/31/20 - 12/11/20, 
+
+
 Elfline, Robert P
 MULS-200-PN-RE
 Piano
 
-08/31/20 - 12/11/20, BERG BLACKBOX
+
+BERG BLACKBOX
 Cummins, John J
 MUSC-211-01
 Musicianship III
 M W F 
 9:00AM - 10:15AM
-08/31/20 - 12/11/20, BERG POTTERH
+
+BERG POTTERH
 Ellis, Margaret J
 MUSC-211L-01
 Muscianship III Lab
 Tu Th 
 8:20AM - 9:10AM
-08/31/20 - 12/11/20, 
+
+
 Elfline, Robert
 MUSC-321-01
 Piano Literature
-
-08/31/20 - 12/11/20]

@@ -59,7 +59,7 @@ public class Tab1 extends MainView {
 			TextHandler parseText = new TextHandler(textArea.getText());
 			ArrayList<Course> courses = parseText.getCourseArray();
 			if (!courses.isEmpty()) {
-				
+				CalendarMainView.triggerCalenderView(courses);
 				for (Course i : courses) {
 					System.out.println(i.toString() + "\n");
 				}
@@ -72,6 +72,4 @@ public class Tab1 extends MainView {
 		}
 
 	}
-	
-	
 }
