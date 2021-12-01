@@ -59,6 +59,7 @@ public class Tab1 extends MainView {
 			TextHandler parseText = new TextHandler(textArea.getText());
 			ArrayList<Course> courses = parseText.getCourseArray();
 			if (!courses.isEmpty()) {
+				System.out.println(courses);
 				CalendarMainView.triggerCalenderView(courses);
 				for (Course i : courses) {
 					System.out.println(i.toString() + "\n");
@@ -67,7 +68,7 @@ public class Tab1 extends MainView {
 				System.out.println("Cannot recognize course.");
 			}
 		} else {
-			System.out.println("You entered nothing :< hung owes me $10 for portillos");
+			System.out.println("You entered nothing :<");
 
 		}
 

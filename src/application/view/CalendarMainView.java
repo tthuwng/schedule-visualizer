@@ -50,55 +50,31 @@ public class CalendarMainView extends MainView {
 		CalendarView calendarView = new CalendarView();
 		Calendar mainCalendar = new Calendar("Main");
 		mainCalendar.setStyle(Style.STYLE1);
-
-//		Entry<String> dentistAppointment = new Entry<>("Dentist");
-		
-//		LocalDate startDate = LocalDate.parse("08/30/21", DateTimeFormatter.ofPattern("MM/dd/uu"));
-//		String endDate = LocalDate.parse("12/10/21", DateTimeFormatter.ofPattern("MM/dd/uu")).format(DateTimeFormatter.BASIC_ISO_DATE);
-//		LocalTime start = LocalTime.parse("12:00PM", DateTimeFormatter.ofPattern("h:mma"));
-//		LocalTime end = LocalTime.parse("1:15PM", DateTimeFormatter.ofPattern("h:mma"));
-//		
-//		if (!start.isAfter(end)) {
-//            dentistAppointment.setInterval(startDate);
-//            dentistAppointment.setInterval(start, end);
-//            
-//            dentistAppointment.setRecurrenceRule("RRULE:FREQ=WEEKLY;BYDAY=TU,TH;UNTIL=" + endDate + ";");
-//            mainCalendar.addEntry(dentistAppointment);
-//        }
-//        if (!end.isAfter(start)) {
-//            dentistAppointment.setInterval(startDate);
-//            dentistAppointment.setInterval(startDate,start, startDate.plusDays(1),end);
-//            dentistAppointment.setRecurrenceRule("RRULE:FREQ=WEEKLY;BYDAY=TU,TH;UNTIL="+ endDate + ";");
-//            mainCalendar.addEntry(dentistAppointment);
-//        }
-        
-		
+     
 
 		// Main engine calendarfx
 		for (Course course: courses) {
 			Entry<String> classEvent = new Entry<>(course.getTitle());
-			
+			classEvent.setLocation(course.getLocation());
 			LocalDate startDate = LocalDate.parse(course.getStartDate(), DateTimeFormatter.ofPattern("MM/dd/uu"));
 			String endDate = LocalDate.parse(course.getEndDate(), DateTimeFormatter.ofPattern("MM/dd/uu")).format(DateTimeFormatter.BASIC_ISO_DATE);
-			LocalTime start = LocalTime.parse(course.getStartTime(), DateTimeFormatter.ofPattern("h:mma"));
-			LocalTime end = LocalTime.parse(course.getEndTime(), DateTimeFormatter.ofPattern("h:mma"));
-			String[] weekDayList = getWeekDayName(course.getWeekdaysList());
-			String weekDayListString = Arrays.toString(weekDayList).replace("[", "").replace("]", "").replace(" ", "");
-			
 			classEvent.setInterval(startDate);
-			classEvent.setInterval(start, end);
-			System.out.println(weekDayListString);
-			classEvent.setRecurrenceRule("RRULE:FREQ=WEEKLY;BYDAY="+ weekDayListString +";UNTIL=" + endDate + ";");
+			if (course.getStartTime() != "" && course.getEndTime() != "") {
+			    LocalTime start = LocalTime.parse(course.getStartTime(), DateTimeFormatter.ofPattern("h:mma"));
+				LocalTime end = LocalTime.parse(course.getEndTime(), DateTimeFormatter.ofPattern("h:mma"));
+				
+				classEvent.setInterval(start, end);
+			}
+			
+			if (course.getWeekdaysList() != null) {
+				String[] weekDayList = getWeekDayName(course.getWeekdaysList());
+				String weekDayListString = Arrays.toString(weekDayList).replace("[", "").replace("]", "").replace(" ", "");
+				classEvent.setRecurrenceRule("RRULE:FREQ=WEEKLY;BYDAY="+ weekDayListString +";UNTIL=" + endDate + ";");
+			}
+			
+			
+			
             mainCalendar.addEntry(classEvent);
-//			if (!start.isAfter(end)) {
-//				
-//	        }
-//	        if (!end.isAfter(start)) {
-//	        	classEvent.setInterval(startDate);
-//	        	classEvent.setInterval(startDate,start, startDate,end);
-//	        	classEvent.setRecurrenceRule("RRULE:FREQ=WEEKLY;BYDAY="+ weekDayListString  + ";UNTIL="+ endDate + ";");
-//	            mainCalendar.addEntry(classEvent);
-//	        }
 
 		}
 

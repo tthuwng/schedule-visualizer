@@ -151,7 +151,6 @@ public class Tab2 extends MainView{
 		
 		tab2.setContent(primaryGrid);
 		tabPane.getTabs().add(tab2);
-		System.out.print("This is a message");
 		
 		ArrayList<Course> courses = new ArrayList<Course>();
 		addCourseButton.setOnAction(new EventHandler<ActionEvent>() {

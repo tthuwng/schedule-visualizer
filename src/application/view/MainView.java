@@ -34,27 +34,17 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 
 public class MainView extends Application {
-	private Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-	protected final double COMPUTER_WIDTH = screenSize.getWidth()-100;
-	protected final double COMPUTER_HEIGHT = screenSize.getHeight()-100;
+//	private Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+//	protected final double COMPUTER_WIDTH = screenSize.getWidth()-100;
+//	protected final double COMPUTER_HEIGHT = screenSize.getHeight()-100;
 	protected final Image APP_ICON = new Image(getClass().getResourceAsStream("images/logo.png"));
 	
 	
-	/*private Stage stage;
-	private Scene startScene;
-
-	private BorderPane root;
-	private BorderPane textRoot;
-	private BorderPane calendarRoot;
-
-	private Scene textScene;
-	private Scene calendarScene;*/
 
 	@Override
 	public void start(Stage primaryStage) {
 		
-		Scene scene = new Scene(initializeWindow(primaryStage), 500, 500);
-		
+		Scene scene = new Scene(initializeWindow(primaryStage), 500, 500);		
 		
 		primaryStage.setScene(scene);
 		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
