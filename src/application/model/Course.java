@@ -73,27 +73,18 @@ public class Course {
 	
 	@Override
 	public String toString() {
-		String output = "Location: "  +location + "\n";
-		output += "Faculty: " + faculty + "\n";
-		output += "Course Code: " + courseCode + "\n";
-		output += "Title: " + title + "\n";
-		output += "Weekdays: ";
-		if (weekdaysList != null) {
-			for (int i = 0; i < weekdaysList.length; i++) {
-				output += weekdaysList[i] + " ";
-			}
+		String output = location + "\n";
+		output += faculty + "\n";
+		output += courseCode + "\n";
+		output += title + "\n";
+		for (int i = 0; i < weekdaysList.length; i++) {
+			output += weekdaysList[i] + " ";
 		}
-		output += "\nTime: ";
 		if (!startTime.equals("") || !endTime.equals("")) {
-			output += startTime + " - " + endTime;
+			output += "\n" + startTime + " - " + endTime;
 		}
-		output += "\nDate: ";
-		if (!startDate.equals("") || !endDate.equals("")) {
-			output += startDate + " - " + endDate;
-		}
-		output += "\n\n";
 		// this is for testing the weekdays case
-		return output;
+		return output; 
 	}
 
 }
