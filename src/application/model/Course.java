@@ -11,6 +11,7 @@ public class Course {
 	private String faculty;
 	private String startTime;
 	private String endTime;
+	public int girth;
 	
 	
 	public Course(String courseCode, String title, String credit, String startDate, String endDate, String startTime, String endTime, String[] weekdaysList, String location, String faculty) {
@@ -69,6 +70,10 @@ public class Course {
 	
 	public String getFaculty() {
 		return faculty;
+	}
+	
+	public int getGirth() {
+		return girth;
 	}
 	
 	@Override
