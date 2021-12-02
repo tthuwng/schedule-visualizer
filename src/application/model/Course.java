@@ -93,7 +93,7 @@ public class Course {
 		}
 		output += "\n\n";
 		// this is for testing the weekdays case
-		return output; 
+		return output;
 	}
 
 }

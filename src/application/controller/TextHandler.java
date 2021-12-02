@@ -70,7 +70,8 @@ public class TextHandler{
 					faculty = inputArray.get(i+5);
 					addCourse();
 					i += 6;
-				} else {
+				} 
+				else if (inputArray.get(i+5).contains(" ")) {
 					weekdaysList = inputArray.get(i+5).split("\\s"); // the weekdays
 					
 					if (inputArray.get(i+7).contains(",")) {
@@ -104,6 +105,12 @@ public class TextHandler{
 							i += 10;
 						}
 					}
+				} else {
+					location = inputArray.get(i+5) + " " + inputArray.get(i+6);
+					faculty = inputArray.get(i+7);
+					i += 8;
+					addCourse();
+					
 				}
 			} else {
 				i++;
