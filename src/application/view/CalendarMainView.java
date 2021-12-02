@@ -238,12 +238,17 @@ public class CalendarMainView extends MainView {
         stackPane.getChildren().addAll(calendarView);
 
 		Scene scene1 = new Scene(stackPane, COMPUTER_WIDTH, COMPUTER_HEIGHT);
+		createWindow(scene1);
+	}
+	
+	
+	public static void createWindow(Scene scene1) {
 		Stage newWindow = new Stage();
-//		newWindow.getIcons().add(APP_ICON);
 		newWindow.setTitle("Calendar");
 		newWindow.setScene(scene1);
 		newWindow.show();
+		newWindow.getIcons().add(APP_ICON);
+
 	}
-	
 	
 }

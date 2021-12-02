@@ -37,7 +37,7 @@ public class MainView extends Application {
 //	private Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
 //	protected final double COMPUTER_WIDTH = screenSize.getWidth()-100;
 //	protected final double COMPUTER_HEIGHT = screenSize.getHeight()-100;
-	protected final Image APP_ICON = new Image(getClass().getResourceAsStream("images/logo.png"));
+	protected final static Image APP_ICON = new Image(MainView.class.getResourceAsStream("images/logo.png"));
 	
 	
 

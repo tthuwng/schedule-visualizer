@@ -216,26 +216,4 @@ public class ParseTester {
 		assertEquals(handler5.getCourseArray().toString(), output5);
 	}
 
-//	@Test
-//	public String parseTextSchedulizeTest(TextArea textArea) {
-//		String output = "";
-//		if (!textArea.getText().equals("")) {
-//			TextHandler parseText = new TextHandler(textArea.getText());
-//			ArrayList<Course> courses = parseText.getCourseArray();
-//			if (!courses.isEmpty()) {
-//				CalendarView run = new CalendarView();
-//				for (Course i : courses) {
-//					output += (i.toString() + "\n");
-//				}
-//			} else {
-//				output += "Cannot recognize course.";
-//			}
-//		} else {
-//			output += "You entered nothing :< hung owes me $10 for portillos";
-//			
-//		}
-//		return output;
-//		
-//	}
-
 }
