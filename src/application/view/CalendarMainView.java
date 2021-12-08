@@ -97,7 +97,8 @@ public class CalendarMainView extends MainView {
 		
 		for (Course course : mainCourse) {
 			Entry<String> classEvent = new Entry<>(course.getCourseCode()  + ": " + course.getTitle());
-			classEvent.setLocation(course.getLocation() != "" ?  "Location: " +  course.getLocation() + " - " : " " + course.getFaculty() != "" ? "Faculty: " + course.getFaculty() : "");
+			classEvent.setLocation(
+					"Location: " +  course.getLocation() + "Faculty: " + course.getFaculty());
 			LocalDate startDate = LocalDate.parse(course.getStartDate(), DateTimeFormatter.ofPattern("MM/dd/uu"));
 			LocalDate endDate = LocalDate.parse(course.getEndDate(), DateTimeFormatter.ofPattern("MM/dd/uu"));
 			String endDateString = LocalDate.parse(course.getEndDate(), DateTimeFormatter.ofPattern("MM/dd/uu")).format(DateTimeFormatter.BASIC_ISO_DATE);
@@ -152,56 +153,6 @@ public class CalendarMainView extends MainView {
 			}
 			conflictCalendar.addEntry(classEvent);
 		}
-		
-		// Main engine calendarfx
-//		for (Course course: courses) {
-//			boolean isConflict = false;
-//			Entry<String> classEvent = new Entry<>(course.getCourseCode()  + ": " + course.getTitle());
-//			classEvent.setLocation(course.getLocation() != "" ?  "Location: " +  course.getLocation() + " - " : " " + course.getFaculty() != "" ? "Faculty: " + course.getFaculty() : "");
-//			LocalDate startDate = LocalDate.parse(course.getStartDate(), DateTimeFormatter.ofPattern("MM/dd/uu"));
-//			LocalDate endDate = LocalDate.parse(course.getEndDate(), DateTimeFormatter.ofPattern("MM/dd/uu"));
-//			String endDateString = LocalDate.parse(course.getEndDate(), DateTimeFormatter.ofPattern("MM/dd/uu")).format(DateTimeFormatter.BASIC_ISO_DATE);
-//			classEvent.setInterval(startDate);
-//			
-//			
-//			if (course.getStartTime() != "" && course.getEndTime() != "") {
-//			    LocalTime startTime = LocalTime.parse(course.getStartTime(), DateTimeFormatter.ofPattern("h:mma"));
-//				LocalTime endTime = LocalTime.parse(course.getEndTime(), DateTimeFormatter.ofPattern("h:mma"));
-//				
-//				for (Course c : courses) {
-//					if (course.getWeekdaysList().equals(c.getWeekdaysList()) && hasOverLap(startTime, endTime, LocalTime.parse(c.getStartTime(), DateTimeFormatter.ofPattern("h:mma")), LocalTime.parse(c.getEndTime(), DateTimeFormatter.ofPattern("h:mma")))) {
-//						System.out.println("conflict!");
-//						isConflict = true;
-//					} else {
-//						courseSet.add(course);
-//					}
-//				}
-//				
-//				
-//				
-//				classEvent.setInterval(startTime, endTime);
-//			} else {
-//				classEvent.setFullDay(true);
-//				classEvent.setInterval(startDate, endDate);
-//				
-//			}
-//			
-//			if (course.getWeekdaysList() != null) {
-//				String[] weekDayList = getWeekDayName(course.getWeekdaysList());
-//				String weekDayListString = Arrays.toString(weekDayList).replace("[", "").replace("]", "").replace(" ", "");
-//				classEvent.setRecurrenceRule("RRULE:FREQ=WEEKLY;BYDAY="+ weekDayListString +";UNTIL=" + endDateString + ";");
-//			}
-//			
-//			if (isConflict) {
-//				conflictCalendar.addEntry(classEvent);
-//			} else {
-//				mainCalendar.addEntry(classEvent);
-//			}
-//            
-//
-//		}
-
-
 
 		CalendarSource myCalendarSource = new CalendarSource("My Calendars");
 		myCalendarSource.getCalendars().addAll(mainCalendar, conflictCalendar);
