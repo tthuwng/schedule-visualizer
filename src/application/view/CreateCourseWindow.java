@@ -194,59 +194,14 @@ public class CreateCourseWindow extends MainView {
 
 		ArrayList<Course> courses = new ArrayList<Course>();
 		addCourseButton.setOnAction(new EventHandler<ActionEvent>() {
-<<<<<<< Updated upstream
-			/*
-			 * Formats the date in the course object
-			 * 
-			 * @param date The date in the course object
-			 * 			   to be reformatted
-			 * 
-			 * return String this returns the formatted date
-			 */
-			private String formatDate(DatePicker date) {
-				String[] splitedDate = date.getValue().toString().split("-");
-				String formatedDate = splitedDate[1] + "/" + splitedDate[2] + "/" + splitedDate[0].substring(2);
-				return formatedDate;
-			}
-			/*
-			 * Validates the start and end date in the course object
-			 * 
-			 * @param start The start date of the course
-			 * @param end   The end date of the course
-			 * 
-			 * return boolean returns if the start and end dates
-			 *  			  are valid
-			 */
-			private boolean validateStartEndDate(String start, String end) {
-				int startYear = Integer.parseInt(start.substring(6));
-				int endYear = Integer.parseInt(end.substring(6));
-				int startMonth = Integer.parseInt(start.substring(0, 2));
-				int endMonth = Integer.parseInt(end.substring(0, 2));
-				int startDay = Integer.parseInt(start.substring(3, 5));
-				int endDay = Integer.parseInt(end.substring(3, 5));
-				if (endYear < startYear) {
-					return false;
-				} else {
-					if (endMonth < startMonth) {
-						return false;
-					} else {
-						if (endDay < startDay) {
-							return false;
-						} else {
-							return true;
-						}
-					}
-				}
-			}
+			
+			
 		/*
 		 * Collects inputted user data and creates a course object
 		 * 
 		 * @param event The event of the submit button 
 		 *              being clicked
 		 */
-=======
-			
->>>>>>> Stashed changes
 			@Override
 			public void handle(ActionEvent event) {
 				String startDateText = formatDate(startDate);
@@ -327,12 +282,29 @@ public class CreateCourseWindow extends MainView {
 		
 		
 	}
+	/*
+	 * Formats the date in the course object
+	 * 
+	 * @param date The date in the course object
+	 * 			   to be reformatted
+	 * 
+	 * return String this returns the formatted date
+	 */
 	private String formatDate(DatePicker date) {
 		String[] splitedDate = date.getValue().toString().split("-");
 		String formatedDate = splitedDate[1] + "/" + splitedDate[2] + "/" + splitedDate[0].substring(2);
 		return formatedDate;
 	}
 	
+	/*
+	 * Validates the start and end date in the course object
+	 * 
+	 * @param start The start date of the course
+	 * @param end   The end date of the course
+	 * 
+	 * return boolean returns if the start and end dates
+	 *  			  are valid
+	 */
 	private boolean validateStartEndDate(String start, String end) {
 		int startYear = Integer.parseInt(start.substring(6));
 		int endYear = Integer.parseInt(end.substring(6));
