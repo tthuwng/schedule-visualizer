@@ -34,7 +34,9 @@ public class CreateCourseWindow extends MainView {
 	/**
 	 * setTab2 allows user to manually plug in their schedules class by class
 	 * 
-	 * @param tabPane
+	 * @param tabPane The TabPane object that the window 
+	 * 				  Displays (GUI)
+	 * 				  
 	 */
 	private void setTab2(TabPane tabPane) {
 		Tab tab2 = new Tab("Create");
@@ -190,23 +192,25 @@ public class CreateCourseWindow extends MainView {
 		tab2.setContent(primaryGrid);
 		tabPane.getTabs().add(tab2);
 
-		submitButtonCreate.setOnAction(action -> {
-			activateSchedule();
-		});
-		
-		removeCourseButton.setOnAction(action -> {
-			removeCourses();
-			notification.setText("No Course added");
-		});
-		
+		ArrayList<Course> courses = new ArrayList<Course>();
 		addCourseButton.setOnAction(new EventHandler<ActionEvent>() {
-			
+			/*
+			 * Formats the date in the course object
+			 * 
+			 * @param date The date in the course object
+			 * 			   to be reformatted
+			 */
 			private String formatDate(DatePicker date) {
 				String[] splitedDate = date.getValue().toString().split("-");
 				String formatedDate = splitedDate[1] + "/" + splitedDate[2] + "/" + splitedDate[0].substring(2);
 				return formatedDate;
 			}
-			
+			/*
+			 * Validates the start and end date in the course object
+			 * 
+			 * @param start The start date of the course
+			 * @param end   The end date of the course
+			 */
 			private boolean validateStartEndDate(String start, String end) {
 				int startYear = Integer.parseInt(start.substring(6));
 				int endYear = Integer.parseInt(end.substring(6));
@@ -228,7 +232,12 @@ public class CreateCourseWindow extends MainView {
 					}
 				}
 			}
-			
+		/*
+		 * Collects inputted user data and creates a course object
+		 * 
+		 * @param event The event of the submit button 
+		 *              being clicked
+		 */
 			@Override
 			public void handle(ActionEvent event) {
 				String startDateText = formatDate(startDate);
@@ -269,31 +278,22 @@ public class CreateCourseWindow extends MainView {
 						String timeOp1 = startTime.getText() + timeOption1.getValue().toString();
 						String timeOp2 = endTime.getText() + timeOption2.getValue().toString();
 	
-						Course courseCustom = new Course(courseCode.getText(), courseTitle.getText(), credit.getText(), startDateText, endDateText, timeOp1,
-								timeOp2,
+						Course courseCustom = new Course(courseCode.getText(), courseTitle.getText(), "", "", "", timeOp1,
+								timeOp2, // need to change empty string
 								classDaysList, fullLocation, facultyName.getText());
 						courses.add(courseCustom);
+						System.out.println(courseCustom.toString());
+	
 						clearCreateWindow();
-						if (courses.isEmpty()) {
-							String cannotReg = "Cannot recognize course.";
-							System.out.println(cannotReg);
-							notification.setText(cannotReg);
-						} else {
-							String addedCourse = "empty";
-							int courseNum = courses.size();
-							if (courseNum == 1) {
-								addedCourse = "A course added";
-							} else {
-								addedCourse = courseNum + " courses added";
-							}
-							notification.setText(addedCourse);
-						}
+	
 					}
 				} else {
 					notification.setText("Your Date is invalid");
 				}
 			}
-			
+			/*
+			 * Clears the user inputted fields
+			 */
 			private void clearCreateWindow() {
 				courseCode.clear();
 				courseTitle.clear();
