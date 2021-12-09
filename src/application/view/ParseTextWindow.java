@@ -56,7 +56,7 @@ public class ParseTextWindow extends MainView {
 		Button submitButtonCreate = new Button("Schedulize");
 		submitButtonCreate.getStyleClass().add("submit-button");
 		subGrid.add(submitButtonCreate, 1, 0);
-		
+	
 		// Remove Course Button
 		Button removeCourseButton = new Button("X");
 		removeCourseButton.getStyleClass().add("remove-course-button");
