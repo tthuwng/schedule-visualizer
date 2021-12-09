@@ -23,7 +23,9 @@ public class ParseTextWindow extends MainView {
 	 * setTab1 is to create the Tab of the Parse Text User can use this class to
 	 * parse their schedule that they copy from their Arches.
 	 * 
-	 * @param tabPane
+	 * @param tabPane The tabPane that is placed in tab1
+	 * 				  that deals with submitting your
+	 * 				  schedule information
 	 */
 	private void setTab1(TabPane tabPane) {
 		Tab tab1 = new Tab("Parse Text");
@@ -86,6 +88,17 @@ public class ParseTextWindow extends MainView {
 		tab1.setContent(grid);
 		tabPane.getTabs().add(tab1);
 	}
+	
+	/*
+	 * This method parses the schedule and makes it into a
+	 * coherent course object
+	 * 
+	 * @param TextArea The text area is where you paste your
+	 * 				   schedule
+	 * 
+	 * return String returns your schedule in the form of 
+	 *   			 a string
+	 */
 	
 	private String parseTextSchedulize(TextArea textArea) {
 		if (!textArea.getText().equals("")) {

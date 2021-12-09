@@ -39,7 +39,11 @@ public class MainView extends Application {
 //	protected final double COMPUTER_HEIGHT = screenSize.getHeight()-100;
 	protected final static Image APP_ICON = new Image(MainView.class.getResourceAsStream("images/logo.png"));
 	protected ArrayList<Course> courses = new ArrayList<>();
-
+	/*
+	 * Sets the primary stage that shows the GUI
+	 * 
+	 * @param primaryStage The stage where the GUI appears
+	 */
 	@Override
 	public void start(Stage primaryStage) {
 		
@@ -50,7 +54,15 @@ public class MainView extends Application {
 		primaryStage.show();
 
 	}
-	
+	/*
+	 * Helper method to initialize the GUI
+	 * 
+	 * @param primaryStage This places different features
+	 * 					   on the GUI
+	 * 
+	 * return VBox This returns a VBox object that is
+	 * 			   used in the GUI
+	 */
 	private VBox initializeWindow(Stage primaryStage) {
 		primaryStage.setTitle("Schedulizer");
 		primaryStage.getIcons().add(APP_ICON);

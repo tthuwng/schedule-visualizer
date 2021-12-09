@@ -20,7 +20,12 @@ public class TextHandler{
 	private String startTime = "";
 	private String endTime = "";
 	
-	
+	/*
+	 * Text handler that deals with the parsing of the input
+	 * 
+	 * @param textArea The text area where the user entered their
+	 * 				   schedule
+	 */
 	public TextHandler(String textArea) {
 		//splits each String value for each new line
 		String[] inputText = textArea.split("\n");
@@ -32,14 +37,24 @@ public class TextHandler{
 		}
 		runHandler();
 	}
-	
+	/*
+	 * An arrayList of the courses the user entered
+	 * 
+	 * return courseArray The array of all of the inputted
+	 * 		  courses
+	 */
 	public ArrayList<Course> getCourseArray() {
 		return courseArray;
 	}
+	/*
+	 * Adds the course to the courseArray
+	 */
 	private void addCourse() {
 		courseArray.add(new Course(courseCode, title, credit, startDate, endDate, startTime, endTime, weekdaysList, location, faculty));
 	}
-	
+	/*
+	 * Resets the data fields to null
+	 */
 	private void resetData() {
 		courseCode = "";
 		title = "";
@@ -49,6 +64,10 @@ public class TextHandler{
 		startTime = "";
 		endTime = "";
 	}
+	/*
+	 * Helper method that parses the courses and handles
+	 * the special cases
+	 */
 	private void runHandler() {
 		int i = 0;
 		int max = inputArray.size();
