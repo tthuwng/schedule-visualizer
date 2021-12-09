@@ -199,6 +199,8 @@ public class CreateCourseWindow extends MainView {
 			 * 
 			 * @param date The date in the course object
 			 * 			   to be reformatted
+			 * 
+			 * return String this returns the formatted date
 			 */
 			private String formatDate(DatePicker date) {
 				String[] splitedDate = date.getValue().toString().split("-");
@@ -210,6 +212,9 @@ public class CreateCourseWindow extends MainView {
 			 * 
 			 * @param start The start date of the course
 			 * @param end   The end date of the course
+			 * 
+			 * return boolean returns if the start and end dates
+			 *  			  are valid
 			 */
 			private boolean validateStartEndDate(String start, String end) {
 				int startYear = Integer.parseInt(start.substring(6));

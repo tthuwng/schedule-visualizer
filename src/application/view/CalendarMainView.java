@@ -26,7 +26,12 @@ public class CalendarMainView extends MainView {
 	private static Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
 	protected final static double COMPUTER_WIDTH = screenSize.getWidth()-100;
 	protected final static double COMPUTER_HEIGHT = screenSize.getHeight()-100;
-	
+	/**
+	 * Gets the week day names
+	 * 
+	 * @param list The list of week days 
+	 * @return String[] Returns the new week day list
+	 */
 	public static String[] getWeekDayName(String[] list ) {
 		String[] newList = new String[list.length];
 		
@@ -192,7 +197,12 @@ public class CalendarMainView extends MainView {
 		createWindow(scene1);
 	}
 	
-	
+	/*
+	 * Creates the window for the calendar
+	 * 
+	 * @param scene1 The scene that the window is 
+	 * 				 displayed on
+	 */
 	public static void createWindow(Scene scene1) {
 		Stage newWindow = new Stage();
 		newWindow.setTitle("Calendar");
