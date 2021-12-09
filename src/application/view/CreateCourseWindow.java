@@ -190,7 +190,15 @@ public class CreateCourseWindow extends MainView {
 		tab2.setContent(primaryGrid);
 		tabPane.getTabs().add(tab2);
 
-		ArrayList<Course> courses = new ArrayList<Course>();
+		submitButtonCreate.setOnAction(action -> {
+			activateSchedule();
+		});
+		
+		removeCourseButton.setOnAction(action -> {
+			removeCourses();
+			notification.setText("No Course added");
+		});
+		
 		addCourseButton.setOnAction(new EventHandler<ActionEvent>() {
 			
 			private String formatDate(DatePicker date) {
@@ -261,14 +269,25 @@ public class CreateCourseWindow extends MainView {
 						String timeOp1 = startTime.getText() + timeOption1.getValue().toString();
 						String timeOp2 = endTime.getText() + timeOption2.getValue().toString();
 	
-						Course courseCustom = new Course(courseCode.getText(), courseTitle.getText(), "", "", "", timeOp1,
-								timeOp2, // need to change empty string
+						Course courseCustom = new Course(courseCode.getText(), courseTitle.getText(), credit.getText(), startDateText, endDateText, timeOp1,
+								timeOp2,
 								classDaysList, fullLocation, facultyName.getText());
 						courses.add(courseCustom);
-						System.out.println(courseCustom.toString());
-	
 						clearCreateWindow();
-	
+						if (courses.isEmpty()) {
+							String cannotReg = "Cannot recognize course.";
+							System.out.println(cannotReg);
+							notification.setText(cannotReg);
+						} else {
+							String addedCourse = "empty";
+							int courseNum = courses.size();
+							if (courseNum == 1) {
+								addedCourse = "A course added";
+							} else {
+								addedCourse = courseNum + " courses added";
+							}
+							notification.setText(addedCourse);
+						}
 					}
 				} else {
 					notification.setText("Your Date is invalid");

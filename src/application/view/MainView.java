@@ -80,7 +80,18 @@ public class MainView extends Application {
 		vBox.getChildren().add(tabPane);
 		return vBox;
 	}
-
+	
+	protected void activateSchedule() {
+		if (!courses.isEmpty()) {
+			CalendarMainView.triggerCalenderView(courses);
+		}
+	}
+	
+	protected void removeCourses() {
+		if (!courses.isEmpty()) {
+			courses.removeAll(courses);
+		}
+	}
 	
 	public static void main(String[] args) {
 		launch(args);

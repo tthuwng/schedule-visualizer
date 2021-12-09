@@ -86,18 +86,6 @@ public class ParseTextWindow extends MainView {
 		tab1.setContent(grid);
 		tabPane.getTabs().add(tab1);
 	}
-
-	private void activateSchedule() {
-		if (!courses.isEmpty()) {
-			CalendarMainView.triggerCalenderView(courses);
-		}
-	}
-	
-	private void removeCourses() {
-		if (!courses.isEmpty()) {
-			courses.removeAll(courses);
-		}
-	}
 	
 	private String parseTextSchedulize(TextArea textArea) {
 		if (!textArea.getText().equals("")) {
