@@ -192,7 +192,14 @@ public class CreateCourseWindow extends MainView {
 		tab2.setContent(primaryGrid);
 		tabPane.getTabs().add(tab2);
 
-		ArrayList<Course> courses = new ArrayList<Course>();
+		submitButtonCreate.setOnAction(action -> {
+			activateSchedule();
+		});
+		
+		removeCourseButton.setOnAction(action -> {
+			removeCourses();
+			notification.setText("No Course added");
+		});
 		addCourseButton.setOnAction(new EventHandler<ActionEvent>() {
 			
 			
@@ -207,28 +214,28 @@ public class CreateCourseWindow extends MainView {
 				String startDateText = formatDate(startDate);
 				String endDateText = formatDate(endDate);
 				if (validateStartEndDate(startDateText, endDateText)) {
-					if (!startTime.getText().equals("") && !endTime.getText().equals("")) {
+					if (true) {
 						ArrayList<String> classDaysArray = new ArrayList<String>();
 						if (sun.isSelected() == true) {
-							classDaysArray.add("S ");
+							classDaysArray.add("S");
 						}
 						if (mon.isSelected() == true) {
-							classDaysArray.add("M ");
+							classDaysArray.add("M");
 						}
 						if (tue.isSelected() == true) {
-							classDaysArray.add("Tu ");
+							classDaysArray.add("Tu");
 						}
 						if (wed.isSelected() == true) {
-							classDaysArray.add("W ");
+							classDaysArray.add("W");
 						}
 						if (thu.isSelected() == true) {
-							classDaysArray.add("Th ");
+							classDaysArray.add("Th");
 						}
 						if (fri.isSelected() == true) {
-							classDaysArray.add("F ");
+							classDaysArray.add("F");
 						}
 						if (sat.isSelected() == true) {
-							classDaysArray.add("Sat ");
+							classDaysArray.add("Sat");
 						}
 	
 						int lengthAList = classDaysArray.size();
@@ -242,14 +249,26 @@ public class CreateCourseWindow extends MainView {
 						String timeOp1 = startTime.getText() + timeOption1.getValue().toString();
 						String timeOp2 = endTime.getText() + timeOption2.getValue().toString();
 	
-						Course courseCustom = new Course(courseCode.getText(), courseTitle.getText(), "", "", "", timeOp1,
+						Course courseCustom = new Course(courseCode.getText(), courseTitle.getText(), credit.getText(), startDateText, endDateText, timeOp1,
 								timeOp2, // need to change empty string
 								classDaysList, fullLocation, facultyName.getText());
 						courses.add(courseCustom);
 						System.out.println(courseCustom.toString());
-	
-						clearCreateWindow();
-	
+						if (courses.isEmpty()) {
+							String cannotReg = "Cannot recognize course.";
+							System.out.println(cannotReg);
+							notification.setText(cannotReg);;
+						} else {
+							String addedCourse = "empty";
+							int courseNum = courses.size();
+							if (courseNum == 1) {
+								addedCourse = "A course added";
+							} else {
+								addedCourse = courseNum + " courses added";
+							}
+							notification.setText(addedCourse);
+						}
+						
 					}
 				} else {
 					notification.setText("Your Date is invalid");
