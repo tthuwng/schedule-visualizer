@@ -1,22 +1,12 @@
 package application.view;
 
-import javafx.scene.control.TabPane;
-import javafx.scene.control.TextArea;
-
 import static org.junit.Assert.assertEquals;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Scanner;
 
 import org.junit.Test;
 
 import application.controller.TextHandler;
-import application.model.Course;
 
 public class ParseTester {
 

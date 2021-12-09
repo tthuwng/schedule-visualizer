@@ -5,10 +5,10 @@ import java.util.ArrayList;
 import application.model.Course;
 
 public class TextHandler{
-	//private String[][] schedule;
+	//List data fields
 	private ArrayList<Course> courseArray = new ArrayList<Course>();
 	private ArrayList<String> inputArray = new ArrayList<String>();
-	// data
+	//data fields
 	private String courseCode = "";
 	private String title = "";
 	private String credit = "";

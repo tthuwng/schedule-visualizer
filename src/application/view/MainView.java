@@ -38,8 +38,7 @@ public class MainView extends Application {
 //	protected final double COMPUTER_WIDTH = screenSize.getWidth()-100;
 //	protected final double COMPUTER_HEIGHT = screenSize.getHeight()-100;
 	protected final static Image APP_ICON = new Image(MainView.class.getResourceAsStream("images/logo.png"));
-	
-	
+	protected ArrayList<Course> courses = new ArrayList<>();
 
 	@Override
 	public void start(Stage primaryStage) {
@@ -72,8 +71,8 @@ public class MainView extends Application {
 		
 		TabPane tabPane = new TabPane();
 		tabPane.getStyleClass().add("background-tab");
-		Tab1 newTab1 = new Tab1(tabPane);
-		Tab2 newTab2 = new Tab2(tabPane);
+		ParseTextWindow parseWindow = new ParseTextWindow(tabPane);
+		CreateCourseWindow createWindow = new CreateCourseWindow(tabPane);
 
 		VBox vBox = new VBox();
 		

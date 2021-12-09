@@ -1,6 +1,6 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
 
-.submit-button, .add-course-button {
+.submit-button, .add-course-button, .remove-course-button {
 	-fx-text-fill: white;
 	-fx-font-weight: bold;
 	-fx-background-color: #1C77C3;
@@ -17,10 +17,19 @@
 	
 }
 .submit-button:hover {
-	-fx-background-color: #f95738;
+	-fx-background-color: #5BC0BE;
 }
 .add-course-button:hover {
 	-fx-background-color: #E3DE8F;
+}
+
+.remove-course-button {
+	-fx-background-color: #f95738;
+	-fx-pref-width: 30px;
+}
+
+.remove-course-button:hover {
+	-fx-background-color: #EBBAB9;
 }
 
 .tab-pane {
