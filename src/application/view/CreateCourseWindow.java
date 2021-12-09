@@ -192,51 +192,17 @@ public class CreateCourseWindow extends MainView {
 		tab2.setContent(primaryGrid);
 		tabPane.getTabs().add(tab2);
 
-		ArrayList<Course> courses = new ArrayList<Course>();
+		submitButtonCreate.setOnAction(action -> {
+			activateSchedule();
+		});
+		
+		removeCourseButton.setOnAction(action -> {
+			removeCourses();
+			notification.setText("No Course added");
+		});
 		addCourseButton.setOnAction(new EventHandler<ActionEvent>() {
-			/*
-			 * Formats the date in the course object
-			 * 
-			 * @param date The date in the course object
-			 * 			   to be reformatted
-			 * 
-			 * return String this returns the formatted date
-			 */
-			private String formatDate(DatePicker date) {
-				String[] splitedDate = date.getValue().toString().split("-");
-				String formatedDate = splitedDate[1] + "/" + splitedDate[2] + "/" + splitedDate[0].substring(2);
-				return formatedDate;
-			}
-			/*
-			 * Validates the start and end date in the course object
-			 * 
-			 * @param start The start date of the course
-			 * @param end   The end date of the course
-			 * 
-			 * return boolean returns if the start and end dates
-			 *  			  are valid
-			 */
-			private boolean validateStartEndDate(String start, String end) {
-				int startYear = Integer.parseInt(start.substring(6));
-				int endYear = Integer.parseInt(end.substring(6));
-				int startMonth = Integer.parseInt(start.substring(0, 2));
-				int endMonth = Integer.parseInt(end.substring(0, 2));
-				int startDay = Integer.parseInt(start.substring(3, 5));
-				int endDay = Integer.parseInt(end.substring(3, 5));
-				if (endYear < startYear) {
-					return false;
-				} else {
-					if (endMonth < startMonth) {
-						return false;
-					} else {
-						if (endDay < startDay) {
-							return false;
-						} else {
-							return true;
-						}
-					}
-				}
-			}
+			
+			
 		/*
 		 * Collects inputted user data and creates a course object
 		 * 
@@ -248,28 +214,28 @@ public class CreateCourseWindow extends MainView {
 				String startDateText = formatDate(startDate);
 				String endDateText = formatDate(endDate);
 				if (validateStartEndDate(startDateText, endDateText)) {
-					if (!startTime.getText().equals("") && !endTime.getText().equals("")) {
+					if (true) {
 						ArrayList<String> classDaysArray = new ArrayList<String>();
 						if (sun.isSelected() == true) {
-							classDaysArray.add("S ");
+							classDaysArray.add("S");
 						}
 						if (mon.isSelected() == true) {
-							classDaysArray.add("M ");
+							classDaysArray.add("M");
 						}
 						if (tue.isSelected() == true) {
-							classDaysArray.add("Tu ");
+							classDaysArray.add("Tu");
 						}
 						if (wed.isSelected() == true) {
-							classDaysArray.add("W ");
+							classDaysArray.add("W");
 						}
 						if (thu.isSelected() == true) {
-							classDaysArray.add("Th ");
+							classDaysArray.add("Th");
 						}
 						if (fri.isSelected() == true) {
-							classDaysArray.add("F ");
+							classDaysArray.add("F");
 						}
 						if (sat.isSelected() == true) {
-							classDaysArray.add("Sat ");
+							classDaysArray.add("Sat");
 						}
 	
 						int lengthAList = classDaysArray.size();
@@ -283,14 +249,26 @@ public class CreateCourseWindow extends MainView {
 						String timeOp1 = startTime.getText() + timeOption1.getValue().toString();
 						String timeOp2 = endTime.getText() + timeOption2.getValue().toString();
 	
-						Course courseCustom = new Course(courseCode.getText(), courseTitle.getText(), "", "", "", timeOp1,
+						Course courseCustom = new Course(courseCode.getText(), courseTitle.getText(), credit.getText(), startDateText, endDateText, timeOp1,
 								timeOp2, // need to change empty string
 								classDaysList, fullLocation, facultyName.getText());
 						courses.add(courseCustom);
 						System.out.println(courseCustom.toString());
-	
-						clearCreateWindow();
-	
+						if (courses.isEmpty()) {
+							String cannotReg = "Cannot recognize course.";
+							System.out.println(cannotReg);
+							notification.setText(cannotReg);;
+						} else {
+							String addedCourse = "empty";
+							int courseNum = courses.size();
+							if (courseNum == 1) {
+								addedCourse = "A course added";
+							} else {
+								addedCourse = courseNum + " courses added";
+							}
+							notification.setText(addedCourse);
+						}
+						
 					}
 				} else {
 					notification.setText("Your Date is invalid");
@@ -322,5 +300,53 @@ public class CreateCourseWindow extends MainView {
 		});
 		
 		
+	}
+	/*
+	 * Formats the date in the course object
+	 * 
+	 * @param date The date in the course object
+	 * 			   to be reformatted
+	 * 
+	 * return String this returns the formatted date
+	 */
+	private String formatDate(DatePicker date) {
+		String[] splitedDate = date.getValue().toString().split("-");
+		String formatedDate = splitedDate[1] + "/" + splitedDate[2] + "/" + splitedDate[0].substring(2);
+		return formatedDate;
+	}
+	
+	/*
+	 * Validates the start and end date in the course object
+	 * 
+	 * @param start The start date of the course
+	 * @param end   The end date of the course
+	 * 
+	 * return boolean returns if the start and end dates
+	 *  			  are valid
+	 */
+	private boolean validateStartEndDate(String start, String end) {
+		int startYear = Integer.parseInt(start.substring(6));
+		int endYear = Integer.parseInt(end.substring(6));
+		int startMonth = Integer.parseInt(start.substring(0, 2));
+		int endMonth = Integer.parseInt(end.substring(0, 2));
+		int startDay = Integer.parseInt(start.substring(3, 5));
+		int endDay = Integer.parseInt(end.substring(3, 5));
+		if (endYear < startYear) {
+			return false;
+		} else if (endYear == startYear) {
+			if (endMonth < startMonth) {
+				return false;
+			} else if (endMonth == startMonth){
+				if (endDay < startDay) {
+					return false;
+				} else {
+					return true;
+				}
+			} else {
+				return true;
+			}
+		} else {
+			return true;
+		}
 	}
 }
